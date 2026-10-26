@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "files": [
+    "./puzzles/four-wheel-intro.json",
+    "./puzzles/four-wheel-daily-test.json"
+  ]
+}

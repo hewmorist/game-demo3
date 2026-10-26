@@ -1,0 +1,73 @@
+import{WheelPack as t,TAB_PLAY as e,wrap as i}from"./wheel-pack.js";import{dialNumberName as s}from"./dial-announcer.js";import{validatePuzzle as h}from"./puzzle-script.js"
+;import{greeting as n}from"./lock-guide.js";const a=e/2,r=t=>"anti"===t?-1:1;export class HypothesisGuide{
+constructor(e,{pack:i=new t,script:s,onCue:n=()=>{},onPlacementCue:a=()=>350,boltDuration:r=()=>1250,quietActions:o=!1}={}){this.announce=e,this.pack=i,this.script=h(s),
+this.wheelCount=this.script.gates.length,this.onCue=n,this.onPlacementCue=a,this.boltDuration=r,this.running=!1,this.generation=0,this.queue=[],this.active=null,this.quietActions=o
+}line(t,e={}){return this.script.lines[t].replace(/\{(\w+)\}/g,(t,i)=>e[i]??"")}get step(){return this.script.steps[this.stage]}get direction(){
+return this.phase.startsWith("search")?r(this.search.direction):r(this.step.direction)}get search(){return this.script.searches[this.searchIndex]}get instruction(){
+return this.running?"restart"===this.phase?"Restart the guided lock to repeat the experiment.":["search-rest","place-rest","bolt-rest"].includes(this.phase)?"Stop. Let the dial settle.":"search"===this.phase?(this.direction<0?"↶ Anticlockwise":"↷ Clockwise")+" · Listening":"place-step"===this.phase?this.direction<0?"↶ Step anti":"↷ Step clock":"place"===this.phase?`${this.direction<0?"↶ Anticlockwise":"↷ Clockwise"}${this.fine?" · Single clicks":this.slow?" · Slow":""}`:"bolt"===this.phase?"Turn the handle · Try bolt":"Listen, then turn.":"open"===this.phase?"Door open. Congratulations!":""
+}get readingStep(){return this.fine?1:this.slow?5:10}get numberOptions(){return{silent:!0}}start(t,e,i=new Date){this.stop(),this.running=!0,this.rotation=t,this.now=e,
+this.lastMove=e,this.pack.reset(),this.pack.training=!1,this.pack.turnTo(t,{emitPickups:!1}),this.phase="briefing",this.stage=0,this.searchIndex=0,this.attemptIndex=0,
+this.gateNarrationEnabled=!0,this.records=new Map,this.soundOrder=[],this.history=[],this.gateComments=[],this.paused=!1
+;const s=i.getHours(),h=this.script.recordedCrack?s<5||s>=22?"Hello.":`Good ${s<12?"morning":s<18?"afternoon":"evening"}.`:n(i);this.say(this.line("greeting",{greeting:h}),{
+after:()=>this.beginSearch()})}say(t,{gate:e=!1,urgent:i=!1,after:s,kind:h="command",duringAction:n=!1}={}){if(this.quietActions&&(e||n))return this.announce(t,{kind:e?"gate":h,
+silent:!0,duringAction:!0}),void s?.();const a={text:t,gate:e,after:s,kind:e?"gate":h,notBefore:e?this.now+350:this.now};if(!this.active||i){
+if(i&&this.active&&(this.active.gate&&this.queue.unshift(this.active),this.generation++,this.active=null),this.quietActions&&t===this.line("stop"))return a.notBefore=this.now+350,
+void this.queue.push(a);e?(i?this.queue.unshift(a):this.queue.push(a),this.pump()):this.speak(a)}else this.queue.push(a)}speak(t){
+if(!this.running||this.paused)return void this.queue.unshift(t);const e=++this.generation;this.active=t,this.speechSince=this.now,this.announce(t.text,{kind:t.kind,interrupt:!0,
+onDone:()=>{e===this.generation&&this.running&&(this.active=null,t.after?.(),this.pump())}})}pump(){
+!this.active&&this.queue.length&&this.running&&!this.paused&&this.now>=this.queue[0].notBefore&&this.speak(this.queue.shift())}beginSearch(){this.phase="search",
+this.counts=new Map,this.resetReversal(this.now),this.slow=!1,this.fine=!1,this.say(this.search.command+(this.quietActions?" I will stay quiet while you turn.":""),{urgent:!0})}
+tone(t){return this.script.signatures[t]}gateLabel(t){return this.soundOrder.includes(t)||this.soundOrder.push(t),["First","Second","Third","Fourth"][this.soundOrder.indexOf(t)]}
+handleEvents(t,e){if("ordinal"===this.script.gateLabels){const e=t.filter(t=>"gatepass"===t.type).sort((t,e)=>(t.dial-e.dial)*t.direction)
+;for(const t of e)this.gateLabel(this.tone(t.wheel))}for(const s of t){if("pickup"===s.type&&"search"===e&&this.say(this.line("searchPickup",{wheel:this.wheelCount-s.wheel}),{
+duringAction:!0}),"gatepass"!==s.type||!this.gateNarrationEnabled)continue;const t=this.tone(s.wheel),h={note:this.script.noteNames[t],
+gate:"ordinal"===this.script.gateLabels?this.gateLabel(t):void 0,number:(i(-s.dial)/3.6).toFixed(1),count:s.count},n=`${t}:${s.direction}`
+;"search"!==e||s.direction!==r(this.search.direction)||this.records.has(n)||this.records.set(n,{dial:s.dial,direction:s.direction,
+isolated:1===s.movingWheels?.length&&s.movingWheels[0]===this.wheelCount-s.wheel});let a=this.line(s.count>1?"gateMultiple":"gateComment",h),o=!1
+;if("search"===e&&s.direction===r(this.search.direction)){const e=(this.counts.get(t)??0)+1;this.counts.set(t,e)
+;const i=this.search.observations.find(i=>i.sound===t&&i.occurrence===e)
+;i&&(a=!i.requireIsolated||1===s.movingWheels?.length&&s.movingWheels[0]===this.wheelCount-s.wheel?i.say:this.script.confidence.unisolated),
+o=this.search.until.sound===t&&this.search.until.occurrence===e,o&&(this.phase="search-rest")}"ordinal"===this.script.gateLabels&&(a=this.gateLabel(t)),this.gateComments.push({
+sound:t,dial:s.dial,text:a}),this.say(a,{gate:!0,urgent:o,after:o&&"ordinal"===this.script.gateLabels?()=>this.say(this.line("stop"),{urgent:!0}):void 0})}}verifyConfidence(){
+const t=this.script.confidence,e=this.wheelCount-t.wheel,s=this.records.get(`${t.sound}:1`),h=this.records.get(`${t.sound}:-1`);if(!s||!h||!s.isolated&&!h.isolated)return!1
+;const n=t=>i(-t.dial+t.direction*a*(e+1));return Math.abs(((t,e)=>i(t-e+180)-180)(n(s),n(h)))<.1}searchComplete(){return this.search.complete}finishSearch(){
+const t=this.searchIndex===this.script.searches.length-1;if(t&&!this.verifyConfidence())return this.phase="restart",void this.say(this.script.confidence.mismatch,{urgent:!0})
+;this.phase="thinking",this.say(this.searchComplete(),{after:()=>{t?this.beginAttempt():(this.searchIndex++,this.beginSearch())}})}beginAttempt(){this.gateNarrationEnabled=!1,
+this.discardGateReplies(),this.pack.releaseCandidates(),this.pack.turnTo(this.rotation,{emitPickups:!1}),this.stage=0,this.phase="thinking",this.history.push({type:"attempt",
+index:this.attemptIndex}),this.say(`Starting trial ${this.attemptIndex+1}. ${this.script.attempts[this.attemptIndex].command}`,{after:()=>this.beginPlacement()})}assignment(){
+return this.script.attempts[this.attemptIndex].assignments[this.stage]}beginPlacement(){if(this.stage===this.wheelCount)return void this.beginBolt()
+;const t=this.assignment(),e=this.wheelCount-t.wheel,s=this.records.get(`${t.sound}:${r(t.fromDirection)}`);if(!s)return this.phase="restart",
+void this.say(this.script.confidence.mismatch,{urgent:!0});this.candidateOffset=i(-s.dial+s.direction*a*(e+1));const h=r(this.step.direction),n=360*(this.step.appearances-1)
+;for(this.target=-this.candidateOffset+h*a*(e+1);(this.target-this.rotation)*h<n-1e-7;)this.target+=360*h;for(;(this.target-this.rotation)*h>=n+360-1e-7;)this.target-=360*h
+;this.phase="place",
+this.slow=!1,this.fine=!1,this.resetReversal(this.now),this.say(this.step.command+(this.quietActions&&0===this.stage&&0===this.attemptIndex?" Slow near the stopping point and finish one click at a time.":""),{
+urgent:!0})}discardGateReplies(){this.queue=this.queue.filter(t=>!t.gate),this.active?.gate&&(this.generation++,this.active=null)}placeCandidate(t=[]){this.discardGateReplies()
+;const e=this.assignment(),i=this.wheelCount-e.wheel,s=this.target-r(this.step.direction)*a*(i+1);this.pack.parkCandidate(i,s),this.pack.turnTo(this.rotation,{emitPickups:!1}),
+this.phase="place-rest",this.history.push({type:"placed",attempt:this.attemptIndex,wheel:e.wheel,sound:e.sound,angle:s});const h=t.some(t=>{if("gatepass"!==t.type)return!1
+;const e=(this.target-t.dial)*t.direction;return e>=-1e-6&&e<=360*(t.count-1)+1e-6&&Math.abs(e/360-Math.round(e/360))<1e-6});this.generation++,this.active=null,this.queue=[]
+;const n=this.onPlacementCue({wheel:i,wheelNumber:e.wheel,trial:this.attemptIndex+1,dial:this.target,direction:r(this.step.direction),soundNeeded:!h});this.pendingPlacement={
+wheel:e.wheel,readyAt:this.now+Math.max(350,Number(n)||0)}}beginBolt(){this.gateNarrationEnabled=!1,this.discardGateReplies(),this.phase="bolt",this.slow=!1,this.fine=!1,
+this.target=this.rotation+this.step.degrees,this.say(this.step.command,{urgent:!0})}blockedHandle(t){return!(!this.running||"bolt"!==this.phase||this.pack.open)&&(this.now=t,
+this.lastMove=t,this.queue=[],this.finishBoltTest(),!0)}finishBoltTest(){const t=this.pack.open;if(this.history.push({type:"bolt",attempt:this.attemptIndex,open:t,
+..."blind"===this.script.discovery?{}:{gates:this.pack.wheels.map((t,e)=>this.pack.gateAligned(e))}}),t)this.phase="open",
+this.say(this.script.recordedCrack?this.line("open"):`That ends trial ${this.attemptIndex+1}. ${this.line("open")}`,{kind:"open",after:()=>{this.running=!1}});else{
+this.onCue("blocked"),this.phase="thinking";const t=this.script.attempts[this.attemptIndex];this.say(`That ends trial ${this.attemptIndex+1}. ${t.failure}`,{after:()=>{
+this.attemptIndex+1<this.script.attempts.length?(this.attemptIndex++,this.beginAttempt()):this.phase="restart"}})}}move(t,e,i){const s=this.rotation,h=t-s,n=this.phase
+;this.rotation=t,this.now=i,Math.abs(h)>1e-5&&(this.lastMove=i);const a=this.pack.turnTo(t);if(!this.running)return t;if(this.handleEvents(a,n),
+["place","place-rest","place-step","bolt"].includes(n)&&this.checkDirection(h,r(this.step.direction)),"search"===n){const t=r(this.search.direction)
+;this.wrongTravel=h*t<0?this.wrongTravel+Math.abs(h):Math.max(0,this.wrongTravel-Math.abs(h)),this.wrongTravel>=7.2&&(this.phase="restart",this.say(this.line("restartSearch"),{
+urgent:!0}))}else if(["place","place-rest","place-step"].includes(n)){const e=r(this.step.direction),i=i=>h*e>0&&(s-i)*e<=1e-7&&(t-i)*e>=-1e-7;if(this.pendingPlacement)return t
+;if(i(this.target))this.placeCandidate(a);else if("place"===n&&i(this.target-3.6*e))this.phase="place-rest",this.say(this.line("stop"),{urgent:!0});else if("place"===n){
+const i=(this.target-t)*e/3.6;!this.slow&&i<=this.step.slowAt&&i>0?(this.slow=!0,this.say(this.line("slow",{command:this.step.command.replace(/\.$/,"")}),{urgent:!0,duringAction:!0
+})):!this.fine&&i<=this.step.fineAt&&i>0&&(this.fine=!0,this.say(this.line("singleClicks"),{urgent:!0,duringAction:!0}))}
+}else"bolt"===n&&h>0&&t>=this.target-1e-7&&(this.phase="bolt-rest",this.boltEnds=i+this.boltDuration(),this.say(this.line("stop"),{urgent:!0}));return t}tick(t){if(this.now=t,
+this.running&&!this.paused){if(this.active&&t-this.speechSince>15e3){const t=this.active;this.active=null,this.generation++,t.after?.()}if(this.pendingPlacement){
+if(t<this.pendingPlacement.readyAt)return;const{wheel:e}=this.pendingPlacement;return this.pendingPlacement=null,this.phase="thinking",void this.say(this.line("candidatePlaced",{
+wheel:e}),{urgent:!0,after:()=>{this.stage++,this.beginPlacement()}})}this.pump(),
+this.active||this.queue.length||("search-rest"===this.phase&&t-this.lastMove>=500?this.finishSearch():"place-rest"===this.phase&&t-this.lastMove>=500?(this.phase="place-step",
+this.say(this.line(this.direction<0?"stepAnti":"stepClock"))):"bolt-rest"===this.phase&&t-this.lastMove>=500&&t>=this.boltEnds&&this.finishBoltTest())}}checkDirection(t,e){
+if(t*e>=0)return this.wrongTravel=0,void(this.reverseSince=null);this.reverseSince??=this.now,this.wrongTravel+=Math.abs(t),
+this.wrongTravel>=7.2&&this.now-this.reverseSince>=250&&this.now>=this.regripUntil&&this.now-(this.lastCorrection??-1/0)>6e3&&(this.lastCorrection=this.now,
+this.say(this.line("wrongWay",{command:this.step.command}),{urgent:!0,duringAction:!0}))}resetReversal(t=this.now){this.wrongTravel=0,this.reverseSince=null,this.regripUntil=t+300}
+pause(){this.paused=!0,this.generation++,this.active&&(this.queue.unshift(this.active),this.active=null)}resume(t){this.paused=!1,this.now=t,this.lastMove=t,this.pump()}stop(){
+this.pendingPlacement=null,this.running=!1,this.generation++,this.active=null,this.queue=[],this.pack.rest()}}

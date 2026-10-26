@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Speech and click check</title>
+<style>
+body{font:18px/1.5 system-ui,sans-serif;margin:0;background:#f5f2e9;color:#203633}
+main{max-width:650px;margin:auto;padding:24px}h1{font-size:1.6rem}
+label{display:block}select,button{font:inherit;padding:12px;max-width:100%;margin:8px 0}
+button{border:1px solid #203633;border-radius:8px;background:white;color:#203633}
+#blank{min-height:220px;margin:24px 0;padding:20px;border:2px dashed #9aa9a4;border-radius:12px}
+small{display:block;color:#53645e}a{color:inherit}
+</style>
+</head>
+<body><main>
+<h1>Speech and click check</h1>
+<p>This separate page does not load the game. With clicks off, it plays speech only.</p>
+<p>Select <strong>Browser default</strong>, then press <strong>Start clicks</strong>. Selecting a setting alone does not start audio. Confirm clicks or the longer test tone are audible before trying speech.</p>
+<label for="click-mode">Mechanical click test</label>
+<select id="click-mode"><option value="off">Off — speech only</option><option value="auto">Browser default</option><option value="playback">Previous game playback setting</option><option value="ambient">Game setting — mixable ambient</option></select>
+<div><button id="click-start" type="button">Start clicks</button> <button id="tone-test" type="button">Play test tone</button> <button id="click-test" type="button" disabled>Touch for click</button></div>
+<p id="click-status" role="status">Clicks off. No mechanical audio context has been created.</p>
+<p>For this comparison, turn iPhone Silent mode off so it cannot hide the clicks in some settings.</p>
+<label for="voice">Voice</label>
+<select id="voice"><option value="">System default</option></select>
+<div><button id="speak" type="button">Speak</button> <button id="stop" type="button">Stop</button></div>
+<p id="status" role="status">Ready.</p>
+<div id="blank">Touch anywhere in this area while the voice speaks.</div>
+<p>The blank area has no touch handlers. The click button can resume interrupted mechanical audio, like a game input. Requested voice and click levels stay fixed throughout; these values do not measure audible volume.</p>
+<a href="./">Return to Safecrack</a>
+<small>Speech and click test · rev a9ad8d3b06</small>
+</main>
+<script>
+const clickMode=document.getElementById('click-mode'),clickStatus=document.getElementById('click-status'),clickTest=document.getElementById('click-test');
+let clickContext=null,clickGain=null,clickBuffer=null,clickTimer=null;
+clickStatus.textContent='Test ready. Select a setting, then press Start clicks.';
+function reportClicks(){
+  clickStatus.textContent=clickContext?`${clickMode.options[clickMode.selectedIndex].text}. Context: ${clickContext.state}; clock: ${clickContext.currentTime.toFixed(2)} seconds.`:'Clicks off.';
+}
+function playClick(){
+  if(clickContext?.state!=='running')return;
+  const source=clickContext.createBufferSource();source.buffer=clickBuffer;
+  source.connect(clickGain);source.onended=()=>source.disconnect();
+  source.start();
+}
+function stopClicks(){
+  clearInterval(clickTimer);clickTimer=null;
+  const previous=clickContext;clickContext=null;clickGain=null;clickBuffer=null;
+  clickTest.disabled=true;
+  try{previous?.close()?.catch(()=>{});}catch{}
+}
+async function startClicks(){
+  stopClicks();
+  clickStatus.textContent='Starting audio from button press…';
+  try{
+    if(clickMode.value==='off')clickMode.value='auto';
+    if(navigator.audioSession)navigator.audioSession.type=clickMode.value;
+    const Context=window.AudioContext||window.webkitAudioContext;
+    if(!Context)throw new Error('Web Audio unavailable');
+    const context=clickContext=new Context();
+    const resumed=context.resume();
+    clickGain=context.createGain();clickGain.gain.value=.45*.5;clickGain.connect(context.destination);
+    // Self-contained audible pulse: no imports or game sound dependencies.
+    clickBuffer=context.createBuffer(1,Math.ceil(.12*context.sampleRate),context.sampleRate);
+    const samples=clickBuffer.getChannelData(0);
+    for(let i=0;i<samples.length;i++){
+      const t=i/context.sampleRate;
+      samples[i]=Math.sin(2*Math.PI*900*t)*Math.exp(-t/.035)*Math.min(1,t/.002);
+    }
+    await resumed;
+    if(clickContext!==context)return;
+    clickTest.disabled=false;playClick();
+    clickTimer=setInterval(()=>{playClick();reportClicks();},400);reportClicks();
+    return context;
+  }catch(error){clickStatus.textContent=`Click test unavailable: ${error.message}`;return null;}
+}
+document.getElementById('click-start').addEventListener('click',startClicks);
+clickMode.addEventListener('change',()=>{
+  stopClicks();
+  clickStatus.textContent=clickMode.value==='off'?'Clicks off.':'Setting selected. Press Start clicks to create audio.';
+});
+document.getElementById('tone-test').addEventListener('click',async()=>{
+  const context=clickContext??await startClicks();if(!context)return;
+  try{
+    if(context.state!=='running')await context.resume();
+    if(context!==clickContext)return;
+    const buffer=context.createBuffer(1,Math.ceil(.7*context.sampleRate),context.sampleRate);
+    const samples=buffer.getChannelData(0);
+    for(let i=0;i<samples.length;i++){
+      const t=i/context.sampleRate;
+      samples[i]=.35*Math.sin(2*Math.PI*440*t)*Math.min(1,t/.01,(.7-t)/.02);
+    }
+    const source=context.createBufferSource();source.buffer=buffer;
+    source.connect(context.destination);source.onended=()=>source.disconnect();source.start();reportClicks();
+  }catch(error){clickStatus.textContent=`Tone test failed: ${error.message}`;}
+});
+clickTest.addEventListener('click',async()=>{
+  const context=clickContext;if(!context)return;
+  try{
+    if(context.state!=='running')await context.resume();
+    if(context!==clickContext)return;
+    playClick();reportClicks();
+  }catch(error){clickStatus.textContent=`Resume failed: ${error.message}`;}
+});
+const synth=window.speechSynthesis;
+const select=document.getElementById('voice'),status=document.getElementById('status');
+let voices=[],active=null;
+function populate(){
+  const selected=select.value;
+  voices=synth.getVoices().filter(v=>v.localService===true&&/^en(?:[-_]|$)/i.test(v.lang));
+  select.replaceChildren(new Option('System default',''));
+  for(const voice of voices)select.add(new Option(`${voice.name} · ${voice.lang}`,voice.voiceURI));
+  if(voices.some(v=>v.voiceURI===selected))select.value=selected;
+}
+if(!synth||!window.SpeechSynthesisUtterance){
+  status.textContent='Speech synthesis is unavailable.';
+  document.getElementById('speak').disabled=true;
+}else{
+  populate();synth.addEventListener('voiceschanged',populate);
+  document.getElementById('speak').addEventListener('click',()=>{
+    if(synth.speaking||synth.pending)synth.cancel();
+    const utterance=new SpeechSynthesisUtterance('This is a speech and click check. Listen to the volume before touching the screen. Now touch the click button, or the blank area below. Keep listening while I speak. Does my voice become quieter when you touch the screen? Can you still hear the clicks while I am speaking?');
+    active=utterance;
+    const voice=voices.find(v=>v.voiceURI===select.value);
+    if(voice){utterance.voice=voice;utterance.lang=voice.lang;}
+    utterance.volume=1;utterance.rate=.9;utterance.pitch=1;
+    status.textContent='Speech requested.';
+    utterance.onstart=()=>{if(active===utterance)status.textContent='Speaking. Touch the blank area.';};
+    utterance.onend=()=>{if(active===utterance){active=null;status.textContent='Finished. Did touching the page change the volume?';}};
+    utterance.onerror=event=>{if(active===utterance){active=null;status.textContent=`Speech error: ${event.error||'unknown'}`;}};
+    synth.speak(utterance);
+  });
+  document.getElementById('stop').addEventListener('click',()=>{
+    active=null;synth.cancel();status.textContent='Stopped.';
+  });
+}
+</script>
+</body>
+</html>

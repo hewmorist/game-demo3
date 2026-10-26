@@ -1,0 +1,2247 @@
+{
+  "voice": "Jennifer · UK female",
+  "source": "Jennifer UK female, TTSMaker 2403; speed 1.0; default pitch/emotion. New Crack Open clips generated 2026-10-23; padded PCM masters preserved in recording pack; runtime MP3 64 kbps.",
+  "clips": [
+    {
+      "text": "Four turns to find four unique gate positions. Go clock.",
+      "file": "exploration-start.wav"
+    },
+    {
+      "text": "One.",
+      "file": "one.wav"
+    },
+    {
+      "text": "Two.",
+      "file": "two.wav"
+    },
+    {
+      "text": "Three.",
+      "file": "three.wav"
+    },
+    {
+      "text": "Four.",
+      "file": "four.wav"
+    },
+    {
+      "text": "Stop.",
+      "file": "stop.wav"
+    },
+    {
+      "text": "Four unique gate positions found.",
+      "file": "exploration-complete.wav"
+    },
+    {
+      "text": "Go clock.",
+      "file": "go-clock.wav"
+    },
+    {
+      "text": "Go anti.",
+      "file": "go-anti.wav"
+    },
+    {
+      "text": "Slowly.",
+      "file": "slowly.wav"
+    },
+    {
+      "text": "Slower.",
+      "file": "slower.wav"
+    },
+    {
+      "text": "Next click.",
+      "file": "next-click.wav"
+    },
+    {
+      "text": "Go clock one click.",
+      "file": "clock-one-click.wav"
+    },
+    {
+      "text": "Go anti one click.",
+      "file": "anti-one-click.wav"
+    },
+    {
+      "text": "Wheel one set.",
+      "file": "wheel-one-set.wav"
+    },
+    {
+      "text": "Wheel two set.",
+      "file": "wheel-two-set.wav"
+    },
+    {
+      "text": "Wheel three set.",
+      "file": "wheel-three-set.wav"
+    },
+    {
+      "text": "Wheel four set.",
+      "file": "wheel-four-set.wav"
+    },
+    {
+      "text": "Let’s try the bolt. Turn the handle.",
+      "file": "try-handle.wav"
+    },
+    {
+      "text": "Lock open.",
+      "file": "lock-open.wav"
+    },
+    {
+      "text": "Sequence successful. All gates are aligned and the fence is down.",
+      "file": "sequence-successful.wav"
+    },
+    {
+      "text": "First we start with four turns to find four unique gate positions. Go clockwise.",
+      "file": "J0005.mp3",
+      "scope": "crack",
+      "id": "J0005"
+    },
+    {
+      "text": "Four unique gate positions found. Next we discover to which wheel they correspond.",
+      "file": "J0011.mp3",
+      "scope": "crack",
+      "id": "J0011"
+    },
+    {
+      "text": "Go clock slow.",
+      "file": "J0014.mp3",
+      "scope": "crack",
+      "id": "J0014"
+    },
+    {
+      "text": "Go anti slow.",
+      "file": "J0015.mp3",
+      "scope": "crack",
+      "id": "J0015"
+    },
+    {
+      "text": "Slower. Single clicks.",
+      "file": "J0016.mp3",
+      "scope": "crack",
+      "id": "J0016"
+    },
+    {
+      "text": "Step clock.",
+      "file": "J0017.mp3",
+      "scope": "crack",
+      "id": "J0017"
+    },
+    {
+      "text": "Step anti.",
+      "file": "J0018.mp3",
+      "scope": "crack",
+      "id": "J0018"
+    },
+    {
+      "text": "Wheel one positioned.",
+      "file": "J0019.mp3",
+      "scope": "crack",
+      "id": "J0019"
+    },
+    {
+      "text": "Wheel two positioned.",
+      "file": "J0020.mp3",
+      "scope": "crack",
+      "id": "J0020"
+    },
+    {
+      "text": "Wheel three positioned.",
+      "file": "J0021.mp3",
+      "scope": "crack",
+      "id": "J0021"
+    },
+    {
+      "text": "Wheel four positioned.",
+      "file": "J0022.mp3",
+      "scope": "crack",
+      "id": "J0022"
+    },
+    {
+      "text": "Other way. Go clock.",
+      "file": "J0023.mp3",
+      "scope": "crack",
+      "id": "J0023"
+    },
+    {
+      "text": "Other way. Go anti.",
+      "file": "J0024.mp3",
+      "scope": "crack",
+      "id": "J0024"
+    },
+    {
+      "text": "The direction changed during the search. Restart this guided session.",
+      "file": "J0025.mp3",
+      "scope": "crack",
+      "id": "J0025"
+    },
+    {
+      "text": "Door open. Congratulations! You cracked it!",
+      "file": "J0027.mp3",
+      "scope": "crack",
+      "id": "J0027"
+    },
+    {
+      "text": "That ends trial one. Door open. Congratulations, you cracked it.",
+      "file": "J0028.mp3",
+      "scope": "crack",
+      "id": "J0028"
+    },
+    {
+      "text": "That ends trial two. Door open. Congratulations, you cracked it.",
+      "file": "J0029.mp3",
+      "scope": "crack",
+      "id": "J0029"
+    },
+    {
+      "text": "That ends trial three. Door open. Congratulations, you cracked it.",
+      "file": "J0030.mp3",
+      "scope": "crack",
+      "id": "J0030"
+    },
+    {
+      "text": "Starting trial 1. We have four readings. Set the farthest wheel first.",
+      "file": "J0031.mp3",
+      "scope": "crack",
+      "id": "J0031"
+    },
+    {
+      "text": "That ends trial 1. Still locked. Restart and repeat the slow survey.",
+      "file": "J0032.mp3",
+      "scope": "crack",
+      "id": "J0032"
+    },
+    {
+      "text": "The pickup order did not isolate four distinct gates. Restart the slow survey.",
+      "file": "J0033.mp3",
+      "scope": "crack",
+      "id": "J0033"
+    },
+    {
+      "text": "Go anti, slowly.",
+      "file": "J0034.mp3",
+      "scope": "crack",
+      "id": "J0034"
+    },
+    {
+      "text": "Wheel four matches the clockwise gate near",
+      "file": "J0035.mp3",
+      "scope": "crack",
+      "id": "J0035"
+    },
+    {
+      "text": "Three readings remain.",
+      "file": "J0036.mp3",
+      "scope": "crack",
+      "id": "J0036"
+    },
+    {
+      "text": "Starting trial 1. Wheel four is identified. Three readings remain: we’ll test their possible assignments.",
+      "file": "J0037.mp3",
+      "scope": "crack",
+      "id": "J0037"
+    },
+    {
+      "text": "Starting trial 2. Try the next gate assignment. Keep wheel four’s reading.",
+      "file": "J0038.mp3",
+      "scope": "crack",
+      "id": "J0038"
+    },
+    {
+      "text": "Starting trial 3. Try the next gate assignment. Keep wheel four’s reading.",
+      "file": "J0039.mp3",
+      "scope": "crack",
+      "id": "J0039"
+    },
+    {
+      "text": "That ends trial one. Still locked. That rules out this trial.",
+      "file": "J0040.mp3",
+      "scope": "crack",
+      "id": "J0040"
+    },
+    {
+      "text": "That ends trial two. Still locked. That rules out this trial.",
+      "file": "J0041.mp3",
+      "scope": "crack",
+      "id": "J0041"
+    },
+    {
+      "text": "That ends trial three. Still locked. That rules out this trial.",
+      "file": "J0042.mp3",
+      "scope": "crack",
+      "id": "J0042"
+    },
+    {
+      "text": "That ends trial 3. None of the trials opened it. Restart the search.",
+      "file": "J0043.mp3",
+      "scope": "crack",
+      "id": "J0043"
+    },
+    {
+      "text": "The readings are not isolated or distinct enough. Restart the slow search.",
+      "file": "J0044.mp3",
+      "scope": "crack",
+      "id": "J0044"
+    },
+    {
+      "text": "Zero",
+      "file": "J0045.mp3",
+      "scope": "crack",
+      "id": "J0045"
+    },
+    {
+      "text": "Five",
+      "file": "J0046.mp3",
+      "scope": "crack",
+      "id": "J0046"
+    },
+    {
+      "text": "Six",
+      "file": "J0047.mp3",
+      "scope": "crack",
+      "id": "J0047"
+    },
+    {
+      "text": "Seven",
+      "file": "J0048.mp3",
+      "scope": "crack",
+      "id": "J0048"
+    },
+    {
+      "text": "Eight",
+      "file": "J0049.mp3",
+      "scope": "crack",
+      "id": "J0049"
+    },
+    {
+      "text": "Nine",
+      "file": "J0050.mp3",
+      "scope": "crack",
+      "id": "J0050"
+    },
+    {
+      "text": "Ten",
+      "file": "J0051.mp3",
+      "scope": "crack",
+      "id": "J0051"
+    },
+    {
+      "text": "Eleven",
+      "file": "J0052.mp3",
+      "scope": "crack",
+      "id": "J0052"
+    },
+    {
+      "text": "Twelve",
+      "file": "J0053.mp3",
+      "scope": "crack",
+      "id": "J0053"
+    },
+    {
+      "text": "Thirteen",
+      "file": "J0054.mp3",
+      "scope": "crack",
+      "id": "J0054"
+    },
+    {
+      "text": "Fourteen",
+      "file": "J0055.mp3",
+      "scope": "crack",
+      "id": "J0055"
+    },
+    {
+      "text": "Fifteen",
+      "file": "J0056.mp3",
+      "scope": "crack",
+      "id": "J0056"
+    },
+    {
+      "text": "Sixteen",
+      "file": "J0057.mp3",
+      "scope": "crack",
+      "id": "J0057"
+    },
+    {
+      "text": "Seventeen",
+      "file": "J0058.mp3",
+      "scope": "crack",
+      "id": "J0058"
+    },
+    {
+      "text": "Eighteen",
+      "file": "J0059.mp3",
+      "scope": "crack",
+      "id": "J0059"
+    },
+    {
+      "text": "Nineteen",
+      "file": "J0060.mp3",
+      "scope": "crack",
+      "id": "J0060"
+    },
+    {
+      "text": "Twenty",
+      "file": "J0061.mp3",
+      "scope": "crack",
+      "id": "J0061"
+    },
+    {
+      "text": "Twenty-one",
+      "file": "J0062.mp3",
+      "scope": "crack",
+      "id": "J0062"
+    },
+    {
+      "text": "Twenty-two",
+      "file": "J0063.mp3",
+      "scope": "crack",
+      "id": "J0063"
+    },
+    {
+      "text": "Twenty-three",
+      "file": "J0064.mp3",
+      "scope": "crack",
+      "id": "J0064"
+    },
+    {
+      "text": "Twenty-four",
+      "file": "J0065.mp3",
+      "scope": "crack",
+      "id": "J0065"
+    },
+    {
+      "text": "Twenty-five",
+      "file": "J0066.mp3",
+      "scope": "crack",
+      "id": "J0066"
+    },
+    {
+      "text": "Twenty-six",
+      "file": "J0067.mp3",
+      "scope": "crack",
+      "id": "J0067"
+    },
+    {
+      "text": "Twenty-seven",
+      "file": "J0068.mp3",
+      "scope": "crack",
+      "id": "J0068"
+    },
+    {
+      "text": "Twenty-eight",
+      "file": "J0069.mp3",
+      "scope": "crack",
+      "id": "J0069"
+    },
+    {
+      "text": "Twenty-nine",
+      "file": "J0070.mp3",
+      "scope": "crack",
+      "id": "J0070"
+    },
+    {
+      "text": "Thirty",
+      "file": "J0071.mp3",
+      "scope": "crack",
+      "id": "J0071"
+    },
+    {
+      "text": "Thirty-one",
+      "file": "J0072.mp3",
+      "scope": "crack",
+      "id": "J0072"
+    },
+    {
+      "text": "Thirty-two",
+      "file": "J0073.mp3",
+      "scope": "crack",
+      "id": "J0073"
+    },
+    {
+      "text": "Thirty-three",
+      "file": "J0074.mp3",
+      "scope": "crack",
+      "id": "J0074"
+    },
+    {
+      "text": "Thirty-four",
+      "file": "J0075.mp3",
+      "scope": "crack",
+      "id": "J0075"
+    },
+    {
+      "text": "Thirty-five",
+      "file": "J0076.mp3",
+      "scope": "crack",
+      "id": "J0076"
+    },
+    {
+      "text": "Thirty-six",
+      "file": "J0077.mp3",
+      "scope": "crack",
+      "id": "J0077"
+    },
+    {
+      "text": "Thirty-seven",
+      "file": "J0078.mp3",
+      "scope": "crack",
+      "id": "J0078"
+    },
+    {
+      "text": "Thirty-eight",
+      "file": "J0079.mp3",
+      "scope": "crack",
+      "id": "J0079"
+    },
+    {
+      "text": "Thirty-nine",
+      "file": "J0080.mp3",
+      "scope": "crack",
+      "id": "J0080"
+    },
+    {
+      "text": "Forty",
+      "file": "J0081.mp3",
+      "scope": "crack",
+      "id": "J0081"
+    },
+    {
+      "text": "Forty-one",
+      "file": "J0082.mp3",
+      "scope": "crack",
+      "id": "J0082"
+    },
+    {
+      "text": "Forty-two",
+      "file": "J0083.mp3",
+      "scope": "crack",
+      "id": "J0083"
+    },
+    {
+      "text": "Forty-three",
+      "file": "J0084.mp3",
+      "scope": "crack",
+      "id": "J0084"
+    },
+    {
+      "text": "Forty-four",
+      "file": "J0085.mp3",
+      "scope": "crack",
+      "id": "J0085"
+    },
+    {
+      "text": "Forty-five",
+      "file": "J0086.mp3",
+      "scope": "crack",
+      "id": "J0086"
+    },
+    {
+      "text": "Forty-six",
+      "file": "J0087.mp3",
+      "scope": "crack",
+      "id": "J0087"
+    },
+    {
+      "text": "Forty-seven",
+      "file": "J0088.mp3",
+      "scope": "crack",
+      "id": "J0088"
+    },
+    {
+      "text": "Forty-eight",
+      "file": "J0089.mp3",
+      "scope": "crack",
+      "id": "J0089"
+    },
+    {
+      "text": "Forty-nine",
+      "file": "J0090.mp3",
+      "scope": "crack",
+      "id": "J0090"
+    },
+    {
+      "text": "Fifty",
+      "file": "J0091.mp3",
+      "scope": "crack",
+      "id": "J0091"
+    },
+    {
+      "text": "Fifty-one",
+      "file": "J0092.mp3",
+      "scope": "crack",
+      "id": "J0092"
+    },
+    {
+      "text": "Fifty-two",
+      "file": "J0093.mp3",
+      "scope": "crack",
+      "id": "J0093"
+    },
+    {
+      "text": "Fifty-three",
+      "file": "J0094.mp3",
+      "scope": "crack",
+      "id": "J0094"
+    },
+    {
+      "text": "Fifty-four",
+      "file": "J0095.mp3",
+      "scope": "crack",
+      "id": "J0095"
+    },
+    {
+      "text": "Fifty-five",
+      "file": "J0096.mp3",
+      "scope": "crack",
+      "id": "J0096"
+    },
+    {
+      "text": "Fifty-six",
+      "file": "J0097.mp3",
+      "scope": "crack",
+      "id": "J0097"
+    },
+    {
+      "text": "Fifty-seven",
+      "file": "J0098.mp3",
+      "scope": "crack",
+      "id": "J0098"
+    },
+    {
+      "text": "Fifty-eight",
+      "file": "J0099.mp3",
+      "scope": "crack",
+      "id": "J0099"
+    },
+    {
+      "text": "Fifty-nine",
+      "file": "J0100.mp3",
+      "scope": "crack",
+      "id": "J0100"
+    },
+    {
+      "text": "Sixty",
+      "file": "J0101.mp3",
+      "scope": "crack",
+      "id": "J0101"
+    },
+    {
+      "text": "Sixty-one",
+      "file": "J0102.mp3",
+      "scope": "crack",
+      "id": "J0102"
+    },
+    {
+      "text": "Sixty-two",
+      "file": "J0103.mp3",
+      "scope": "crack",
+      "id": "J0103"
+    },
+    {
+      "text": "Sixty-three",
+      "file": "J0104.mp3",
+      "scope": "crack",
+      "id": "J0104"
+    },
+    {
+      "text": "Sixty-four",
+      "file": "J0105.mp3",
+      "scope": "crack",
+      "id": "J0105"
+    },
+    {
+      "text": "Sixty-five",
+      "file": "J0106.mp3",
+      "scope": "crack",
+      "id": "J0106"
+    },
+    {
+      "text": "Sixty-six",
+      "file": "J0107.mp3",
+      "scope": "crack",
+      "id": "J0107"
+    },
+    {
+      "text": "Sixty-seven",
+      "file": "J0108.mp3",
+      "scope": "crack",
+      "id": "J0108"
+    },
+    {
+      "text": "Sixty-eight",
+      "file": "J0109.mp3",
+      "scope": "crack",
+      "id": "J0109"
+    },
+    {
+      "text": "Sixty-nine",
+      "file": "J0110.mp3",
+      "scope": "crack",
+      "id": "J0110"
+    },
+    {
+      "text": "Seventy",
+      "file": "J0111.mp3",
+      "scope": "crack",
+      "id": "J0111"
+    },
+    {
+      "text": "Seventy-one",
+      "file": "J0112.mp3",
+      "scope": "crack",
+      "id": "J0112"
+    },
+    {
+      "text": "Seventy-two",
+      "file": "J0113.mp3",
+      "scope": "crack",
+      "id": "J0113"
+    },
+    {
+      "text": "Seventy-three",
+      "file": "J0114.mp3",
+      "scope": "crack",
+      "id": "J0114"
+    },
+    {
+      "text": "Seventy-four",
+      "file": "J0115.mp3",
+      "scope": "crack",
+      "id": "J0115"
+    },
+    {
+      "text": "Seventy-five",
+      "file": "J0116.mp3",
+      "scope": "crack",
+      "id": "J0116"
+    },
+    {
+      "text": "Seventy-six",
+      "file": "J0117.mp3",
+      "scope": "crack",
+      "id": "J0117"
+    },
+    {
+      "text": "Seventy-seven",
+      "file": "J0118.mp3",
+      "scope": "crack",
+      "id": "J0118"
+    },
+    {
+      "text": "Seventy-eight",
+      "file": "J0119.mp3",
+      "scope": "crack",
+      "id": "J0119"
+    },
+    {
+      "text": "Seventy-nine",
+      "file": "J0120.mp3",
+      "scope": "crack",
+      "id": "J0120"
+    },
+    {
+      "text": "Eighty",
+      "file": "J0121.mp3",
+      "scope": "crack",
+      "id": "J0121"
+    },
+    {
+      "text": "Eighty-one",
+      "file": "J0122.mp3",
+      "scope": "crack",
+      "id": "J0122"
+    },
+    {
+      "text": "Eighty-two",
+      "file": "J0123.mp3",
+      "scope": "crack",
+      "id": "J0123"
+    },
+    {
+      "text": "Eighty-three",
+      "file": "J0124.mp3",
+      "scope": "crack",
+      "id": "J0124"
+    },
+    {
+      "text": "Eighty-four",
+      "file": "J0125.mp3",
+      "scope": "crack",
+      "id": "J0125"
+    },
+    {
+      "text": "Eighty-five",
+      "file": "J0126.mp3",
+      "scope": "crack",
+      "id": "J0126"
+    },
+    {
+      "text": "Eighty-six",
+      "file": "J0127.mp3",
+      "scope": "crack",
+      "id": "J0127"
+    },
+    {
+      "text": "Eighty-seven",
+      "file": "J0128.mp3",
+      "scope": "crack",
+      "id": "J0128"
+    },
+    {
+      "text": "Eighty-eight",
+      "file": "J0129.mp3",
+      "scope": "crack",
+      "id": "J0129"
+    },
+    {
+      "text": "Eighty-nine",
+      "file": "J0130.mp3",
+      "scope": "crack",
+      "id": "J0130"
+    },
+    {
+      "text": "Ninety",
+      "file": "J0131.mp3",
+      "scope": "crack",
+      "id": "J0131"
+    },
+    {
+      "text": "Ninety-one",
+      "file": "J0132.mp3",
+      "scope": "crack",
+      "id": "J0132"
+    },
+    {
+      "text": "Ninety-two",
+      "file": "J0133.mp3",
+      "scope": "crack",
+      "id": "J0133"
+    },
+    {
+      "text": "Ninety-three",
+      "file": "J0134.mp3",
+      "scope": "crack",
+      "id": "J0134"
+    },
+    {
+      "text": "Ninety-four",
+      "file": "J0135.mp3",
+      "scope": "crack",
+      "id": "J0135"
+    },
+    {
+      "text": "Ninety-five",
+      "file": "J0136.mp3",
+      "scope": "crack",
+      "id": "J0136"
+    },
+    {
+      "text": "Ninety-six",
+      "file": "J0137.mp3",
+      "scope": "crack",
+      "id": "J0137"
+    },
+    {
+      "text": "Ninety-seven",
+      "file": "J0138.mp3",
+      "scope": "crack",
+      "id": "J0138"
+    },
+    {
+      "text": "Ninety-eight",
+      "file": "J0139.mp3",
+      "scope": "crack",
+      "id": "J0139"
+    },
+    {
+      "text": "Ninety-nine",
+      "file": "J0140.mp3",
+      "scope": "crack",
+      "id": "J0140"
+    },
+    {
+      "text": "Point.",
+      "file": "J0141.mp3",
+      "scope": "crack",
+      "id": "J0141"
+    },
+    {
+      "text": "Hundred.",
+      "file": "J0142.mp3",
+      "scope": "crack",
+      "id": "J0142"
+    },
+    {
+      "text": "Go clockwise.",
+      "file": "J0143.mp3",
+      "scope": "crack",
+      "id": "J0143"
+    },
+    {
+      "text": "Go anticlockwise.",
+      "file": "J0144.mp3",
+      "scope": "crack",
+      "id": "J0144"
+    },
+    {
+      "text": "Go anticlockwise, slowly.",
+      "file": "J0145.mp3",
+      "scope": "crack",
+      "id": "J0145"
+    },
+    {
+      "text": "The dial is reset. Go anticlockwise. Watch wheel four, nearest the drive. Stop with its gate notch near the top and its label saying Setting readable or Gate centred. Read its rounded whole-number wheel reading, not the main dial number. Enter that value in the reply box and tap Check and continue.",
+      "file": "LD001.mp3",
+      "scope": "discovery",
+      "id": "LD001"
+    },
+    {
+      "text": "Wheel four's setting is readable. Enter",
+      "file": "LD002.mp3",
+      "scope": "discovery",
+      "id": "LD002"
+    },
+    {
+      "text": "then tap Check and continue.",
+      "file": "LD003.mp3",
+      "scope": "discovery",
+      "id": "LD003"
+    },
+    {
+      "text": "Wheel one: enter",
+      "file": "LD004.mp3",
+      "scope": "discovery",
+      "id": "LD004"
+    },
+    {
+      "text": "Wheel two: enter",
+      "file": "LD005.mp3",
+      "scope": "discovery",
+      "id": "LD005"
+    },
+    {
+      "text": "Wheel three: enter",
+      "file": "LD006.mp3",
+      "scope": "discovery",
+      "id": "LD006"
+    },
+    {
+      "text": "Wheel four: enter",
+      "file": "LD007.mp3",
+      "scope": "discovery",
+      "id": "LD007"
+    },
+    {
+      "text": "That entry matches. Wheel one is already readable: enter",
+      "file": "LD008.mp3",
+      "scope": "discovery",
+      "id": "LD008"
+    },
+    {
+      "text": "That entry matches. Wheel two is already readable: enter",
+      "file": "LD009.mp3",
+      "scope": "discovery",
+      "id": "LD009"
+    },
+    {
+      "text": "That entry matches. Wheel three is already readable: enter",
+      "file": "LD010.mp3",
+      "scope": "discovery",
+      "id": "LD010"
+    },
+    {
+      "text": "That entry matches. Wheel four is already readable: enter",
+      "file": "LD011.mp3",
+      "scope": "discovery",
+      "id": "LD011"
+    },
+    {
+      "text": "That entry matches. Continue anti; repeat for wheel one.",
+      "file": "LD012.mp3",
+      "scope": "discovery",
+      "id": "LD012"
+    },
+    {
+      "text": "That entry matches. Continue anti; repeat for wheel two.",
+      "file": "LD013.mp3",
+      "scope": "discovery",
+      "id": "LD013"
+    },
+    {
+      "text": "That entry matches. Continue anti; repeat for wheel three.",
+      "file": "LD014.mp3",
+      "scope": "discovery",
+      "id": "LD014"
+    },
+    {
+      "text": "That entry matches. Continue anti; repeat for wheel four.",
+      "file": "LD015.mp3",
+      "scope": "discovery",
+      "id": "LD015"
+    },
+    {
+      "text": "Keep the dial still for a moment so I can check the rounded wheel reading, then check again.",
+      "file": "LD016.mp3",
+      "scope": "discovery",
+      "id": "LD016"
+    },
+    {
+      "text": "Wheel one's setting is not readable yet. Continue anticlockwise to its gate, then enter its wheel reading.",
+      "file": "LD017.mp3",
+      "scope": "discovery",
+      "id": "LD017"
+    },
+    {
+      "text": "Wheel two's setting is not readable yet. Continue anticlockwise to its gate, then enter its wheel reading.",
+      "file": "LD018.mp3",
+      "scope": "discovery",
+      "id": "LD018"
+    },
+    {
+      "text": "Wheel three's setting is not readable yet. Continue anticlockwise to its gate, then enter its wheel reading.",
+      "file": "LD019.mp3",
+      "scope": "discovery",
+      "id": "LD019"
+    },
+    {
+      "text": "Wheel four's setting is not readable yet. Continue anticlockwise to its gate, then enter its wheel reading.",
+      "file": "LD020.mp3",
+      "scope": "discovery",
+      "id": "LD020"
+    },
+    {
+      "text": "Wheel one's gate is not close enough to the top yet. Continue anticlockwise until this wheel's label says Setting readable or Gate centred. If you passed its notch, continue to its next crossing. Keep turning even if a different wheel catches the dial. Then enter the rounded whole-number wheel reading and check again.",
+      "file": "LD021.mp3",
+      "scope": "discovery",
+      "id": "LD021"
+    },
+    {
+      "text": "Wheel two's gate is not close enough to the top yet. Continue anticlockwise until this wheel's label says Setting readable or Gate centred. If you passed its notch, continue to its next crossing. Keep turning even if a different wheel catches the dial. Then enter the rounded whole-number wheel reading and check again.",
+      "file": "LD022.mp3",
+      "scope": "discovery",
+      "id": "LD022"
+    },
+    {
+      "text": "Wheel three's gate is not close enough to the top yet. Continue anticlockwise until this wheel's label says Setting readable or Gate centred. If you passed its notch, continue to its next crossing. Keep turning even if a different wheel catches the dial. Then enter the rounded whole-number wheel reading and check again.",
+      "file": "LD023.mp3",
+      "scope": "discovery",
+      "id": "LD023"
+    },
+    {
+      "text": "Wheel four's gate is not close enough to the top yet. Continue anticlockwise until this wheel's label says Setting readable or Gate centred. If you passed its notch, continue to its next crossing. Keep turning even if a different wheel catches the dial. Then enter the rounded whole-number wheel reading and check again.",
+      "file": "LD024.mp3",
+      "scope": "discovery",
+      "id": "LD024"
+    },
+    {
+      "text": "That number does not match the observed reading. Check the value in the instruction above and try again.",
+      "file": "LD025.mp3",
+      "scope": "discovery",
+      "id": "LD025"
+    },
+    {
+      "text": "Follow the current instruction before entering a reply.",
+      "file": "LD026.mp3",
+      "scope": "discovery",
+      "id": "LD026"
+    },
+    {
+      "text": "All four observed settings are entered. Press Check lock settings in the reply form.",
+      "file": "LD027.mp3",
+      "scope": "discovery",
+      "id": "LD027"
+    },
+    {
+      "text": "The lock settings are correct. Next, we will determine the opening sequence. Press Reset dial; we will start anticlockwise, targeting wheel one, the wheel farthest from the dial.",
+      "file": "LD028.mp3",
+      "scope": "discovery",
+      "id": "LD028"
+    },
+    {
+      "text": "The dial is reset. Go anticlockwise. Watch wheel one, farthest from the drive. All four wheels must first be picked up. Establish the appearance count, then stop with its gate near the top. We will record the main dial number and appearance count. Enter both when asked and tap Check and continue. Keep the dial still while entering them.",
+      "file": "LD029.mp3",
+      "scope": "discovery",
+      "id": "LD029"
+    },
+    {
+      "text": "The dial is reset. Go clockwise. Watch wheel one, farthest from the drive. All four wheels must first be picked up. Establish the appearance count, then stop with its gate near the top. We will record the main dial number and appearance count. Enter both when asked and tap Check and continue. Keep the dial still while entering them.",
+      "file": "LD030.mp3",
+      "scope": "discovery",
+      "id": "LD030"
+    },
+    {
+      "text": "Go anticlockwise. Watch wheel one, farthest from the drive. All four wheels must first be picked up. Establish the appearance count, then stop with its gate near the top. We will record the main dial number and appearance count. Enter both when asked and tap Check and continue. Keep the dial still while entering them.",
+      "file": "LD031.mp3",
+      "scope": "discovery",
+      "id": "LD031"
+    },
+    {
+      "text": "Go clockwise. Watch wheel one, farthest from the drive. All four wheels must first be picked up. Establish the appearance count, then stop with its gate near the top. We will record the main dial number and appearance count. Enter both when asked and tap Check and continue. Keep the dial still while entering them.",
+      "file": "LD032.mp3",
+      "scope": "discovery",
+      "id": "LD032"
+    },
+    {
+      "text": "The dial is reset. Go anticlockwise for at least one full turn, then stop at wheel four’s gate. This clearing move makes room for the opening sequence.",
+      "file": "LD033.mp3",
+      "scope": "discovery",
+      "id": "LD033"
+    },
+    {
+      "text": "That entry matches. Go anti; repeat for wheel one.",
+      "file": "LD034.mp3",
+      "scope": "discovery",
+      "id": "LD034"
+    },
+    {
+      "text": "That entry matches. Go anti; repeat for wheel two.",
+      "file": "LD035.mp3",
+      "scope": "discovery",
+      "id": "LD035"
+    },
+    {
+      "text": "That entry matches. Go anti; repeat for wheel three.",
+      "file": "LD036.mp3",
+      "scope": "discovery",
+      "id": "LD036"
+    },
+    {
+      "text": "That entry matches. Go anti; repeat for wheel four.",
+      "file": "LD037.mp3",
+      "scope": "discovery",
+      "id": "LD037"
+    },
+    {
+      "text": "That entry matches. Go clock; repeat for wheel one.",
+      "file": "LD038.mp3",
+      "scope": "discovery",
+      "id": "LD038"
+    },
+    {
+      "text": "That entry matches. Go clock; repeat for wheel two.",
+      "file": "LD039.mp3",
+      "scope": "discovery",
+      "id": "LD039"
+    },
+    {
+      "text": "That entry matches. Go clock; repeat for wheel three.",
+      "file": "LD040.mp3",
+      "scope": "discovery",
+      "id": "LD040"
+    },
+    {
+      "text": "That entry matches. Go clock; repeat for wheel four.",
+      "file": "LD041.mp3",
+      "scope": "discovery",
+      "id": "LD041"
+    },
+    {
+      "text": "The dial moved. Keep it still; I will check the reading again.",
+      "file": "LD042.mp3",
+      "scope": "discovery",
+      "id": "LD042"
+    },
+    {
+      "text": "Slowly. Watch wheel one’s gate.",
+      "file": "LD043.mp3",
+      "scope": "discovery",
+      "id": "LD043"
+    },
+    {
+      "text": "Slowly. Watch wheel two’s gate.",
+      "file": "LD044.mp3",
+      "scope": "discovery",
+      "id": "LD044"
+    },
+    {
+      "text": "Slowly. Watch wheel three’s gate.",
+      "file": "LD045.mp3",
+      "scope": "discovery",
+      "id": "LD045"
+    },
+    {
+      "text": "Slowly. Watch wheel four’s gate.",
+      "file": "LD046.mp3",
+      "scope": "discovery",
+      "id": "LD046"
+    },
+    {
+      "text": "Slowly. Stop at wheel four’s gate.",
+      "file": "LD047.mp3",
+      "scope": "discovery",
+      "id": "LD047"
+    },
+    {
+      "text": "Go anti. Establish wheel one’s appearance count.",
+      "file": "LD053.mp3",
+      "scope": "discovery",
+      "id": "LD053"
+    },
+    {
+      "text": "Go anti. Establish wheel two’s appearance count.",
+      "file": "LD054.mp3",
+      "scope": "discovery",
+      "id": "LD054"
+    },
+    {
+      "text": "Go anti. Establish wheel three’s appearance count.",
+      "file": "LD055.mp3",
+      "scope": "discovery",
+      "id": "LD055"
+    },
+    {
+      "text": "Go anti. Establish wheel four’s appearance count.",
+      "file": "LD056.mp3",
+      "scope": "discovery",
+      "id": "LD056"
+    },
+    {
+      "text": "Go clock. Establish wheel one’s appearance count.",
+      "file": "LD057.mp3",
+      "scope": "discovery",
+      "id": "LD057"
+    },
+    {
+      "text": "Go clock. Establish wheel two’s appearance count.",
+      "file": "LD058.mp3",
+      "scope": "discovery",
+      "id": "LD058"
+    },
+    {
+      "text": "Go clock. Establish wheel three’s appearance count.",
+      "file": "LD059.mp3",
+      "scope": "discovery",
+      "id": "LD059"
+    },
+    {
+      "text": "Go clock. Establish wheel four’s appearance count.",
+      "file": "LD060.mp3",
+      "scope": "discovery",
+      "id": "LD060"
+    },
+    {
+      "text": "Wheel one aligned.",
+      "file": "LD061.mp3",
+      "scope": "discovery",
+      "id": "LD061"
+    },
+    {
+      "text": "Wheel two aligned.",
+      "file": "LD062.mp3",
+      "scope": "discovery",
+      "id": "LD062"
+    },
+    {
+      "text": "Wheel three aligned.",
+      "file": "LD063.mp3",
+      "scope": "discovery",
+      "id": "LD063"
+    },
+    {
+      "text": "Wheel four aligned.",
+      "file": "LD064.mp3",
+      "scope": "discovery",
+      "id": "LD064"
+    },
+    {
+      "text": "Clearing move recorded.",
+      "file": "LD065.mp3",
+      "scope": "discovery",
+      "id": "LD065"
+    },
+    {
+      "text": "All gates are aligned and the fence is down.",
+      "file": "LD066.mp3",
+      "scope": "discovery",
+      "id": "LD066"
+    },
+    {
+      "text": "Enter",
+      "file": "LD067.mp3",
+      "scope": "discovery",
+      "id": "LD067"
+    },
+    {
+      "text": "and appearance",
+      "file": "LD068.mp3",
+      "scope": "discovery",
+      "id": "LD068"
+    },
+    {
+      "text": "The dial reads",
+      "file": "LD069.mp3",
+      "scope": "discovery",
+      "id": "LD069"
+    },
+    {
+      "text": "after adjustment. For the opening instructions, enter",
+      "file": "LD070.mp3",
+      "scope": "discovery",
+      "id": "LD070"
+    },
+    {
+      "text": "Check the appearance count for this move and try again.",
+      "file": "LD071.mp3",
+      "scope": "discovery",
+      "id": "LD071"
+    },
+    {
+      "text": "All stops recorded. Checking the complete sequence from Reset.",
+      "file": "LD072.mp3",
+      "scope": "discovery",
+      "id": "LD072"
+    },
+    {
+      "text": "Both tasks complete. Your opening sequence is verified.",
+      "file": "LD073.mp3",
+      "scope": "discovery",
+      "id": "LD073"
+    },
+    {
+      "text": "Clearing move complete.",
+      "file": "MD018.mp3",
+      "scope": "dial",
+      "id": "MD018"
+    },
+    {
+      "text": "Door open. Congratulations!",
+      "file": "MD023.mp3",
+      "scope": "dial",
+      "id": "MD023"
+    },
+    {
+      "text": "Good morning.",
+      "file": "DOT001.mp3",
+      "scope": "dial",
+      "id": "DOT001"
+    },
+    {
+      "text": "Good afternoon.",
+      "file": "DOT002.mp3",
+      "scope": "dial",
+      "id": "DOT002"
+    },
+    {
+      "text": "Good evening.",
+      "file": "DOT003.mp3",
+      "scope": "dial",
+      "id": "DOT003"
+    },
+    {
+      "text": "Hello.",
+      "file": "DOT004.mp3",
+      "scope": "dial",
+      "id": "DOT004"
+    },
+    {
+      "text": "We own this lock now. Let’s use what we learned, to open it efficiently. Follow my instructions. Remember - a deliberate and steady hand wins the day. To indicate direction I will just say, “Go clock” or “Go anti”. We are going to make it really easy for you and give you a colored dot to move up to the pointer, after the necessary revolutions or appearances have been made. The dot is blue for anticlockwise rotation, green for clockwise, and, It turns red as you make the final approach to the wheel set point.",
+      "file": "DOT005.mp3",
+      "scope": "dial",
+      "id": "DOT005"
+    },
+    {
+      "text": "Let’s crack on, shall we.",
+      "file": "DOT006.mp3",
+      "scope": "dial",
+      "id": "DOT006"
+    },
+    {
+      "text": "Go anti for",
+      "file": "DOT007.mp3",
+      "scope": "dial",
+      "id": "DOT007"
+    },
+    {
+      "text": "Go clock for",
+      "file": "DOT008.mp3",
+      "scope": "dial",
+      "id": "DOT008"
+    },
+    {
+      "text": "dot appearances.",
+      "file": "DOT009.mp3",
+      "scope": "dial",
+      "id": "DOT009"
+    },
+    {
+      "text": "Single clicks.",
+      "file": "DOT010.mp3",
+      "scope": "dial",
+      "id": "DOT010"
+    },
+    {
+      "text": "Wheel one is set.",
+      "file": "DOT011.mp3",
+      "scope": "dial",
+      "id": "DOT011"
+    },
+    {
+      "text": "Wheel two is set.",
+      "file": "DOT012.mp3",
+      "scope": "dial",
+      "id": "DOT012"
+    },
+    {
+      "text": "Wheel three is set.",
+      "file": "DOT013.mp3",
+      "scope": "dial",
+      "id": "DOT013"
+    },
+    {
+      "text": "Wheel four is set. Try the handle to retract bolt.",
+      "file": "DOT014.mp3",
+      "scope": "dial",
+      "id": "DOT014"
+    },
+    {
+      "text": "Sorry, but you messed up. Calm down, and get a grip. Reset the Dial and start again.",
+      "file": "DOT015.mp3",
+      "scope": "dial",
+      "id": "DOT015"
+    },
+    {
+      "text": "You might want to save these lock details. You own the lock now and can open it efficiently by a specific direct dial sequence.",
+      "file": "LD074.mp3",
+      "scope": "discovery",
+      "id": "LD074"
+    },
+    {
+      "text": "I'm sorry, but you went past the set position. Reset the dial and try again. Approach more slowly this time and consider using the nudge control for final positioning.",
+      "file": "LD075.mp3",
+      "scope": "discovery",
+      "id": "LD075"
+    },
+    {
+      "text": "Follow my instructions. Remember - a deliberate and steady hand wins the day. To indicate direction I will just say, “Go clock” or “Go anti.”",
+      "file": "CRACK_INTRO.mp3",
+      "scope": "crack",
+      "id": "CRACK_INTRO"
+    }
+  ],
+  "discoveryTemplates": [
+    {
+      "source": "S01",
+      "choices": {},
+      "text": "The dial is reset. Go anticlockwise. Watch wheel four, nearest the drive. Stop with its gate notch near the top and its label saying Setting readable or Gate centred. Read its rounded whole-number wheel reading, not the main dial number. Enter that value in the reply box and tap Check and continue.",
+      "assembly": [
+        {
+          "clip": "LD001"
+        }
+      ]
+    },
+    {
+      "source": "S02",
+      "choices": {},
+      "text": "Wheel four's setting is readable. Enter {reading}, then tap Check and continue.",
+      "assembly": [
+        {
+          "clip": "LD002"
+        },
+        {
+          "variable": "reading"
+        },
+        {
+          "clip": "LD003"
+        }
+      ]
+    },
+    {
+      "source": "S03",
+      "choices": {
+        "wheel": "one"
+      },
+      "text": "Wheel one: enter {reading}.",
+      "assembly": [
+        {
+          "clip": "LD004"
+        },
+        {
+          "variable": "reading"
+        }
+      ]
+    },
+    {
+      "source": "S03",
+      "choices": {
+        "wheel": "two"
+      },
+      "text": "Wheel two: enter {reading}.",
+      "assembly": [
+        {
+          "clip": "LD005"
+        },
+        {
+          "variable": "reading"
+        }
+      ]
+    },
+    {
+      "source": "S03",
+      "choices": {
+        "wheel": "three"
+      },
+      "text": "Wheel three: enter {reading}.",
+      "assembly": [
+        {
+          "clip": "LD006"
+        },
+        {
+          "variable": "reading"
+        }
+      ]
+    },
+    {
+      "source": "S03",
+      "choices": {
+        "wheel": "four"
+      },
+      "text": "Wheel four: enter {reading}.",
+      "assembly": [
+        {
+          "clip": "LD007"
+        },
+        {
+          "variable": "reading"
+        }
+      ]
+    },
+    {
+      "source": "S04",
+      "choices": {
+        "wheel": "one"
+      },
+      "text": "That entry matches. Wheel one is already readable: enter {reading}.",
+      "assembly": [
+        {
+          "clip": "LD008"
+        },
+        {
+          "variable": "reading"
+        }
+      ]
+    },
+    {
+      "source": "S04",
+      "choices": {
+        "wheel": "two"
+      },
+      "text": "That entry matches. Wheel two is already readable: enter {reading}.",
+      "assembly": [
+        {
+          "clip": "LD009"
+        },
+        {
+          "variable": "reading"
+        }
+      ]
+    },
+    {
+      "source": "S04",
+      "choices": {
+        "wheel": "three"
+      },
+      "text": "That entry matches. Wheel three is already readable: enter {reading}.",
+      "assembly": [
+        {
+          "clip": "LD010"
+        },
+        {
+          "variable": "reading"
+        }
+      ]
+    },
+    {
+      "source": "S04",
+      "choices": {
+        "wheel": "four"
+      },
+      "text": "That entry matches. Wheel four is already readable: enter {reading}.",
+      "assembly": [
+        {
+          "clip": "LD011"
+        },
+        {
+          "variable": "reading"
+        }
+      ]
+    },
+    {
+      "source": "S05",
+      "choices": {
+        "wheel": "one"
+      },
+      "text": "That entry matches. Continue anti; repeat for wheel one.",
+      "assembly": [
+        {
+          "clip": "LD012"
+        }
+      ]
+    },
+    {
+      "source": "S05",
+      "choices": {
+        "wheel": "two"
+      },
+      "text": "That entry matches. Continue anti; repeat for wheel two.",
+      "assembly": [
+        {
+          "clip": "LD013"
+        }
+      ]
+    },
+    {
+      "source": "S05",
+      "choices": {
+        "wheel": "three"
+      },
+      "text": "That entry matches. Continue anti; repeat for wheel three.",
+      "assembly": [
+        {
+          "clip": "LD014"
+        }
+      ]
+    },
+    {
+      "source": "S05",
+      "choices": {
+        "wheel": "four"
+      },
+      "text": "That entry matches. Continue anti; repeat for wheel four.",
+      "assembly": [
+        {
+          "clip": "LD015"
+        }
+      ]
+    },
+    {
+      "source": "S06",
+      "choices": {},
+      "text": "Keep the dial still for a moment so I can check the rounded wheel reading, then check again.",
+      "assembly": [
+        {
+          "clip": "LD016"
+        }
+      ]
+    },
+    {
+      "source": "S07",
+      "choices": {
+        "wheel": "one"
+      },
+      "text": "Wheel one's setting is not readable yet. Continue anticlockwise to its gate, then enter its wheel reading.",
+      "assembly": [
+        {
+          "clip": "LD017"
+        }
+      ]
+    },
+    {
+      "source": "S07",
+      "choices": {
+        "wheel": "two"
+      },
+      "text": "Wheel two's setting is not readable yet. Continue anticlockwise to its gate, then enter its wheel reading.",
+      "assembly": [
+        {
+          "clip": "LD018"
+        }
+      ]
+    },
+    {
+      "source": "S07",
+      "choices": {
+        "wheel": "three"
+      },
+      "text": "Wheel three's setting is not readable yet. Continue anticlockwise to its gate, then enter its wheel reading.",
+      "assembly": [
+        {
+          "clip": "LD019"
+        }
+      ]
+    },
+    {
+      "source": "S07",
+      "choices": {
+        "wheel": "four"
+      },
+      "text": "Wheel four's setting is not readable yet. Continue anticlockwise to its gate, then enter its wheel reading.",
+      "assembly": [
+        {
+          "clip": "LD020"
+        }
+      ]
+    },
+    {
+      "source": "S08",
+      "choices": {
+        "wheel": "one"
+      },
+      "text": "Wheel one's gate is not close enough to the top yet. Continue anticlockwise until this wheel's label says Setting readable or Gate centred. If you passed its notch, continue to its next crossing. Keep turning even if a different wheel catches the dial. Then enter the rounded whole-number wheel reading and check again.",
+      "assembly": [
+        {
+          "clip": "LD021"
+        }
+      ]
+    },
+    {
+      "source": "S08",
+      "choices": {
+        "wheel": "two"
+      },
+      "text": "Wheel two's gate is not close enough to the top yet. Continue anticlockwise until this wheel's label says Setting readable or Gate centred. If you passed its notch, continue to its next crossing. Keep turning even if a different wheel catches the dial. Then enter the rounded whole-number wheel reading and check again.",
+      "assembly": [
+        {
+          "clip": "LD022"
+        }
+      ]
+    },
+    {
+      "source": "S08",
+      "choices": {
+        "wheel": "three"
+      },
+      "text": "Wheel three's gate is not close enough to the top yet. Continue anticlockwise until this wheel's label says Setting readable or Gate centred. If you passed its notch, continue to its next crossing. Keep turning even if a different wheel catches the dial. Then enter the rounded whole-number wheel reading and check again.",
+      "assembly": [
+        {
+          "clip": "LD023"
+        }
+      ]
+    },
+    {
+      "source": "S08",
+      "choices": {
+        "wheel": "four"
+      },
+      "text": "Wheel four's gate is not close enough to the top yet. Continue anticlockwise until this wheel's label says Setting readable or Gate centred. If you passed its notch, continue to its next crossing. Keep turning even if a different wheel catches the dial. Then enter the rounded whole-number wheel reading and check again.",
+      "assembly": [
+        {
+          "clip": "LD024"
+        }
+      ]
+    },
+    {
+      "source": "S09",
+      "choices": {},
+      "text": "That number does not match the observed reading. Check the value in the instruction above and try again.",
+      "assembly": [
+        {
+          "clip": "LD025"
+        }
+      ]
+    },
+    {
+      "source": "S10",
+      "choices": {},
+      "text": "Follow the current instruction before entering a reply.",
+      "assembly": [
+        {
+          "clip": "LD026"
+        }
+      ]
+    },
+    {
+      "source": "S11",
+      "choices": {},
+      "text": "All four observed settings are entered. Press Check lock settings in the reply form.",
+      "assembly": [
+        {
+          "clip": "LD027"
+        }
+      ]
+    },
+    {
+      "source": "S12",
+      "choices": {},
+      "text": "The lock settings are correct. Next, we will determine the opening sequence. Press Reset dial; we will start anticlockwise, targeting wheel one, the wheel farthest from the dial.",
+      "assembly": [
+        {
+          "clip": "LD028"
+        }
+      ]
+    },
+    {
+      "source": "O01",
+      "choices": {
+        "fullDirection": "anticlockwise"
+      },
+      "text": "The dial is reset. Go anticlockwise. Watch wheel one, farthest from the drive. All four wheels must first be picked up. Establish the appearance count, then stop with its gate near the top. We will record the main dial number and appearance count. Enter both when asked and tap Check and continue. Keep the dial still while entering them.",
+      "assembly": [
+        {
+          "clip": "LD029"
+        }
+      ]
+    },
+    {
+      "source": "O01",
+      "choices": {
+        "fullDirection": "clockwise"
+      },
+      "text": "The dial is reset. Go clockwise. Watch wheel one, farthest from the drive. All four wheels must first be picked up. Establish the appearance count, then stop with its gate near the top. We will record the main dial number and appearance count. Enter both when asked and tap Check and continue. Keep the dial still while entering them.",
+      "assembly": [
+        {
+          "clip": "LD030"
+        }
+      ]
+    },
+    {
+      "source": "O02",
+      "choices": {
+        "fullDirection": "anticlockwise"
+      },
+      "text": "Go anticlockwise. Watch wheel one, farthest from the drive. All four wheels must first be picked up. Establish the appearance count, then stop with its gate near the top. We will record the main dial number and appearance count. Enter both when asked and tap Check and continue. Keep the dial still while entering them.",
+      "assembly": [
+        {
+          "clip": "LD031"
+        }
+      ]
+    },
+    {
+      "source": "O02",
+      "choices": {
+        "fullDirection": "clockwise"
+      },
+      "text": "Go clockwise. Watch wheel one, farthest from the drive. All four wheels must first be picked up. Establish the appearance count, then stop with its gate near the top. We will record the main dial number and appearance count. Enter both when asked and tap Check and continue. Keep the dial still while entering them.",
+      "assembly": [
+        {
+          "clip": "LD032"
+        }
+      ]
+    },
+    {
+      "source": "O03",
+      "choices": {},
+      "text": "The dial is reset. Go anticlockwise for at least one full turn, then stop at wheel four’s gate. This clearing move makes room for the opening sequence.",
+      "assembly": [
+        {
+          "clip": "LD033"
+        }
+      ]
+    },
+    {
+      "source": "O04",
+      "choices": {
+        "direction": "anti",
+        "wheel": "one"
+      },
+      "text": "That entry matches. Go anti; repeat for wheel one.",
+      "assembly": [
+        {
+          "clip": "LD034"
+        }
+      ]
+    },
+    {
+      "source": "O04",
+      "choices": {
+        "direction": "anti",
+        "wheel": "two"
+      },
+      "text": "That entry matches. Go anti; repeat for wheel two.",
+      "assembly": [
+        {
+          "clip": "LD035"
+        }
+      ]
+    },
+    {
+      "source": "O04",
+      "choices": {
+        "direction": "anti",
+        "wheel": "three"
+      },
+      "text": "That entry matches. Go anti; repeat for wheel three.",
+      "assembly": [
+        {
+          "clip": "LD036"
+        }
+      ]
+    },
+    {
+      "source": "O04",
+      "choices": {
+        "direction": "anti",
+        "wheel": "four"
+      },
+      "text": "That entry matches. Go anti; repeat for wheel four.",
+      "assembly": [
+        {
+          "clip": "LD037"
+        }
+      ]
+    },
+    {
+      "source": "O04",
+      "choices": {
+        "direction": "clock",
+        "wheel": "one"
+      },
+      "text": "That entry matches. Go clock; repeat for wheel one.",
+      "assembly": [
+        {
+          "clip": "LD038"
+        }
+      ]
+    },
+    {
+      "source": "O04",
+      "choices": {
+        "direction": "clock",
+        "wheel": "two"
+      },
+      "text": "That entry matches. Go clock; repeat for wheel two.",
+      "assembly": [
+        {
+          "clip": "LD039"
+        }
+      ]
+    },
+    {
+      "source": "O04",
+      "choices": {
+        "direction": "clock",
+        "wheel": "three"
+      },
+      "text": "That entry matches. Go clock; repeat for wheel three.",
+      "assembly": [
+        {
+          "clip": "LD040"
+        }
+      ]
+    },
+    {
+      "source": "O04",
+      "choices": {
+        "direction": "clock",
+        "wheel": "four"
+      },
+      "text": "That entry matches. Go clock; repeat for wheel four.",
+      "assembly": [
+        {
+          "clip": "LD041"
+        }
+      ]
+    },
+    {
+      "source": "O05",
+      "choices": {},
+      "text": "The dial moved. Keep it still; I will check the reading again.",
+      "assembly": [
+        {
+          "clip": "LD042"
+        }
+      ]
+    },
+    {
+      "source": "O06",
+      "choices": {
+        "wheel": "one"
+      },
+      "text": "Slowly. Watch wheel one’s gate.",
+      "assembly": [
+        {
+          "clip": "LD043"
+        }
+      ]
+    },
+    {
+      "source": "O06",
+      "choices": {
+        "wheel": "two"
+      },
+      "text": "Slowly. Watch wheel two’s gate.",
+      "assembly": [
+        {
+          "clip": "LD044"
+        }
+      ]
+    },
+    {
+      "source": "O06",
+      "choices": {
+        "wheel": "three"
+      },
+      "text": "Slowly. Watch wheel three’s gate.",
+      "assembly": [
+        {
+          "clip": "LD045"
+        }
+      ]
+    },
+    {
+      "source": "O06",
+      "choices": {
+        "wheel": "four"
+      },
+      "text": "Slowly. Watch wheel four’s gate.",
+      "assembly": [
+        {
+          "clip": "LD046"
+        }
+      ]
+    },
+    {
+      "source": "O07",
+      "choices": {},
+      "text": "Slowly. Stop at wheel four’s gate.",
+      "assembly": [
+        {
+          "clip": "LD047"
+        }
+      ]
+    },
+    {
+      "source": "O09",
+      "choices": {
+        "direction": "anti",
+        "wheel": "one"
+      },
+      "text": "Go anti. Establish wheel one’s appearance count.",
+      "assembly": [
+        {
+          "clip": "LD053"
+        }
+      ]
+    },
+    {
+      "source": "O09",
+      "choices": {
+        "direction": "anti",
+        "wheel": "two"
+      },
+      "text": "Go anti. Establish wheel two’s appearance count.",
+      "assembly": [
+        {
+          "clip": "LD054"
+        }
+      ]
+    },
+    {
+      "source": "O09",
+      "choices": {
+        "direction": "anti",
+        "wheel": "three"
+      },
+      "text": "Go anti. Establish wheel three’s appearance count.",
+      "assembly": [
+        {
+          "clip": "LD055"
+        }
+      ]
+    },
+    {
+      "source": "O09",
+      "choices": {
+        "direction": "anti",
+        "wheel": "four"
+      },
+      "text": "Go anti. Establish wheel four’s appearance count.",
+      "assembly": [
+        {
+          "clip": "LD056"
+        }
+      ]
+    },
+    {
+      "source": "O09",
+      "choices": {
+        "direction": "clock",
+        "wheel": "one"
+      },
+      "text": "Go clock. Establish wheel one’s appearance count.",
+      "assembly": [
+        {
+          "clip": "LD057"
+        }
+      ]
+    },
+    {
+      "source": "O09",
+      "choices": {
+        "direction": "clock",
+        "wheel": "two"
+      },
+      "text": "Go clock. Establish wheel two’s appearance count.",
+      "assembly": [
+        {
+          "clip": "LD058"
+        }
+      ]
+    },
+    {
+      "source": "O09",
+      "choices": {
+        "direction": "clock",
+        "wheel": "three"
+      },
+      "text": "Go clock. Establish wheel three’s appearance count.",
+      "assembly": [
+        {
+          "clip": "LD059"
+        }
+      ]
+    },
+    {
+      "source": "O09",
+      "choices": {
+        "direction": "clock",
+        "wheel": "four"
+      },
+      "text": "Go clock. Establish wheel four’s appearance count.",
+      "assembly": [
+        {
+          "clip": "LD060"
+        }
+      ]
+    },
+    {
+      "source": "O10",
+      "choices": {
+        "wheel": "one"
+      },
+      "text": "Wheel one aligned.",
+      "assembly": [
+        {
+          "clip": "LD061"
+        }
+      ]
+    },
+    {
+      "source": "O10",
+      "choices": {
+        "wheel": "two"
+      },
+      "text": "Wheel two aligned.",
+      "assembly": [
+        {
+          "clip": "LD062"
+        }
+      ]
+    },
+    {
+      "source": "O10",
+      "choices": {
+        "wheel": "three"
+      },
+      "text": "Wheel three aligned.",
+      "assembly": [
+        {
+          "clip": "LD063"
+        }
+      ]
+    },
+    {
+      "source": "O10",
+      "choices": {
+        "wheel": "four"
+      },
+      "text": "Wheel four aligned.",
+      "assembly": [
+        {
+          "clip": "LD064"
+        }
+      ]
+    },
+    {
+      "source": "O11",
+      "choices": {},
+      "text": "Clearing move recorded.",
+      "assembly": [
+        {
+          "clip": "LD065"
+        }
+      ]
+    },
+    {
+      "source": "O12",
+      "choices": {},
+      "text": "All gates are aligned and the fence is down.",
+      "assembly": [
+        {
+          "clip": "LD066"
+        }
+      ]
+    },
+    {
+      "source": "O13",
+      "choices": {},
+      "text": "Enter {reading} and appearance {appearance}.",
+      "assembly": [
+        {
+          "clip": "LD067"
+        },
+        {
+          "variable": "reading"
+        },
+        {
+          "clip": "LD068"
+        },
+        {
+          "variable": "appearance"
+        }
+      ]
+    },
+    {
+      "source": "O14",
+      "choices": {},
+      "text": "The dial reads {actual} after adjustment. For the opening instructions, enter {reading} and appearance {appearance}.",
+      "assembly": [
+        {
+          "clip": "LD069"
+        },
+        {
+          "variable": "actual"
+        },
+        {
+          "clip": "LD070"
+        },
+        {
+          "variable": "reading"
+        },
+        {
+          "clip": "LD068"
+        },
+        {
+          "variable": "appearance"
+        }
+      ]
+    },
+    {
+      "source": "O15",
+      "choices": {},
+      "text": "Check the appearance count for this move and try again.",
+      "assembly": [
+        {
+          "clip": "LD071"
+        }
+      ]
+    },
+    {
+      "source": "O16",
+      "choices": {},
+      "text": "All stops recorded. Checking the complete sequence from Reset.",
+      "assembly": [
+        {
+          "clip": "LD072"
+        }
+      ]
+    },
+    {
+      "source": "O17",
+      "choices": {},
+      "text": "Both tasks complete. Your opening sequence is verified.",
+      "assembly": [
+        {
+          "clip": "LD073"
+        }
+      ]
+    },
+    {
+      "source": "completion-save-reminder",
+      "choices": {},
+      "text": "Both tasks complete. Your opening sequence is verified. You might want to save these lock details. You own the lock now and can open it efficiently by a specific direct dial sequence.",
+      "assembly": [
+        {
+          "clip": "LD073"
+        },
+        {
+          "clip": "LD074"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "id": "four-wheel-daily-test",
+  "title": "Four wheels · daily test 00 / 19 / 55 / 40",
+  "gates": [
+    0,
+    19,
+    55,
+    40
+  ],
+  "lines": {
+    "greeting": "{greeting} Follow my instructions. Remember - a deliberate and steady hand wins the day. To indicate direction I will just say, “Go clock” or “Go anti.” Let’s crack on, shall we.",
+    "stop": "Stop.",
+    "singleClicks": "Slower. Single clicks.",
+    "stepAnti": "Step anti.",
+    "stepClock": "Step clock.",
+    "keepGoing": "Keep going.",
+    "open": "Door open. Congratulations! You cracked it!",
+    "wrongWay": "Other way. {command}",
+    "slow": "{command} slow.",
+    "engagedOne": "Wheel {wheel} engaged.",
+    "engagedMany": "{count} wheels engaged.",
+    "gateComment": "Gate sound.",
+    "gateMultiple": "Gate sound.",
+    "searchPickup": "Wheel {wheel} picked up.",
+    "candidatePlaced": "Wheel {wheel} positioned.",
+    "restartSearch": "The direction changed during the search. Restart this guided session.",
+    "firstPairing": "Wheel four is identified. Three readings remain: we’ll test their possible assignments.",
+    "nextPairing": "Try the next gate assignment. Keep wheel four’s reading.",
+    "swapPairing": "Still locked. That rules out this trial.",
+    "pairingsFailed": "None of the trials opened it. Restart the search."
+  },
+  "steps": [
+    {
+      "type": "wheel",
+      "wheel": 1,
+      "direction": "clock",
+      "appearances": 5,
+      "slowAt": 30,
+      "fineAt": 10,
+      "command": "Go clock.",
+      "set": "Wheel 1 positioned."
+    },
+    {
+      "type": "wheel",
+      "wheel": 2,
+      "direction": "anti",
+      "appearances": 4,
+      "slowAt": 30,
+      "fineAt": 10,
+      "command": "Go anti.",
+      "set": "Wheel 2 positioned."
+    },
+    {
+      "type": "wheel",
+      "wheel": 3,
+      "direction": "clock",
+      "appearances": 3,
+      "slowAt": 30,
+      "fineAt": 10,
+      "command": "Go clock.",
+      "set": "Wheel 3 positioned."
+    },
+    {
+      "type": "wheel",
+      "wheel": 4,
+      "direction": "anti",
+      "appearances": 2,
+      "slowAt": 30,
+      "fineAt": 10,
+      "command": "Go anti.",
+      "set": "Wheel 4 positioned."
+    },
+    {
+      "type": "bolt",
+      "direction": "clock",
+      "degrees": 36,
+      "command": "Let’s try the bolt. Turn the handle."
+    }
+  ],
+  "mode": "hypothesis",
+  "signatures": [
+    "a",
+    "b",
+    "c",
+    "d"
+  ],
+  "noteNames": {
+    "a": "First reading",
+    "b": "Second reading",
+    "c": "Third reading",
+    "d": "Fourth reading"
+  },
+  "searches": [
+    {
+      "direction": "clock",
+      "command": "First we start with four turns to find four unique gate positions. Go clockwise.",
+      "until": {
+        "degrees": 1440,
+        "readings": 4
+      },
+      "observations": [],
+      "complete": "Four unique gate positions found. Next we discover to which wheel they correspond."
+    },
+    {
+      "direction": "anti",
+      "command": "Go anticlockwise, slowly.",
+      "until": {
+        "gateCount": 1
+      },
+      "observations": [],
+      "complete": "Wheel four matches the clockwise gate near {number}. Three readings remain."
+    }
+  ],
+  "confidence": {
+    "wheel": 4,
+    "mismatch": "The readings are not isolated or distinct enough. Restart the slow search.",
+    "unisolated": "More than one wheel could be moving. That reading is inconclusive."
+  },
+  "gateAudio": "single",
+  "discovery": "blind",
+  "recordedCrack": true
+}

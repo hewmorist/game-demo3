@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#182b2c">
+  <title>Safecrack · Four wheels</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <input id="saved-lock-file" type="file" accept=".json,application/json" aria-label="Saved lock JSON file" hidden>
+  <header><h1>Safecrack<span>.</span></h1><span class="edition">THE LISTENING ROOM</span></header>
+  <section id="room" aria-labelledby="welcome-title">
+    <div class="welcome"><p class="eyebrow">A steady hand. A listening ear.</p><h2 id="welcome-title" tabindex="-1">Every lock<br><em>has a language.</em></h2><p>Choose a lock to begin.</p></div>
+    <a class="manual-link" href="user-manual.html" target="_blank" rel="noopener" aria-label="User manual (opens in a new tab)"><svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path d="M16 7C11 3 5 4 3 5v22c4-2 9-2 13 1 4-3 9-3 13-1V5c-2-1-8-2-13 2Zm0 0v21M7 10h5m-5 5h5m8-5h5m-5 5h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>User manual</span></a>
+    <p id="room-status" role="status"></p>
+    <div class="saved-lock-actions"><button id="load-saved-lock" type="button">Load saved lock</button></div>
+    <p id="saved-lock-status" role="status"></p>
+    <div class="room-scene">
+      <div class="wall left"></div><div class="wall right"></div><div class="floor"></div>
+      <button id="open-lock" class="lock-tile" aria-label="Open introductory lock">
+        <span class="picture-mat">
+          <svg viewBox="0 0 240 280" aria-hidden="true">
+            <defs><pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse"><path d="M0 7 7 0" stroke="#c4af7d" stroke-width=".6"/></pattern></defs>
+            <path d="M30 28H210V248H30Z" fill="#344d48" stroke="#233e39" stroke-width="5"/>
+            <path d="M44 42H196V234H44Z" fill="url(#hatch)" stroke="#d0b477" stroke-width="2"/>
+            <path d="M52 51H187V224H52Z" fill="#344d48" stroke="#cfb77f"/>
+            <g stroke="#dbc58b" fill="none"><circle cx="114" cy="124" r="49" stroke-width="3"/><circle cx="114" cy="124" r="40"/><circle cx="114" cy="124" r="25" stroke-width="7"/><path d="M114 64v10M173 170v35M164 187h18" stroke-width="5"/><path d="M72 91l8 5m-14 17 9 2m-7 20 9-2m-1 22 7-6m11 16 4-9m20 12v-10m22 5-4-9m20-6-8-5m13-16-9-2m7-20-9 2m-1-22-7 6m-12-16-3 9"/></g>
+            <g fill="#b39861"><path d="M25 60h13v30H25zM25 191h13v30H25z"/><circle cx="60" cy="60" r="3"/><circle cx="179" cy="60" r="3"/><circle cx="60" cy="215" r="3"/><circle cx="179" cy="215" r="3"/></g>
+          </svg>
+          <span class="picture-number">01</span>
+        </span>
+        <span class="plaque"><strong id="first-lock-name">Introductory lock</strong><span id="first-lock-description">Four wheels · AR-X-Ray Lock Model available</span></span>
+      </button>
+      <button id="open-daily" class="lock-tile" aria-label="Open daily lock">
+        <span class="picture-mat">
+          <svg viewBox="0 0 240 280" aria-hidden="true">
+            <defs><pattern id="daily-hatch" width="7" height="7" patternUnits="userSpaceOnUse"><path d="M0 7 7 0" stroke="#c4af7d" stroke-width=".6"/></pattern></defs>
+            <path d="M30 28H210V248H30Z" fill="#344d48" stroke="#233e39" stroke-width="5"/>
+            <path d="M44 42H196V234H44Z" fill="url(#daily-hatch)" stroke="#d0b477" stroke-width="2"/>
+            <path d="M52 51H187V224H52Z" fill="#344d48" stroke="#cfb77f"/>
+            <g stroke="#dbc58b" fill="none"><circle cx="114" cy="124" r="49" stroke-width="3"/><circle cx="114" cy="124" r="40"/><circle cx="114" cy="124" r="25" stroke-width="7"/><path d="M114 64v10M173 170v35M164 187h18" stroke-width="5"/><path d="M72 91l8 5m-14 17 9 2m-7 20 9-2m-1 22 7-6m11 16 4-9m20 12v-10m22 5-4-9m20-6-8-5m13-16-9-2m7-20-9 2m-1-22-7 6m-12-16-3 9"/></g>
+            <g fill="#b39861"><path d="M25 60h13v30H25zM25 191h13v30H25z"/><circle cx="60" cy="60" r="3"/><circle cx="179" cy="60" r="3"/><circle cx="60" cy="215" r="3"/><circle cx="179" cy="215" r="3"/></g>
+          </svg>
+          <span class="picture-number">02</span>
+        </span>
+        <span class="plaque"><strong>Daily lock</strong><span>Four wheels · Listen and discover</span><span id="daily-date"></span></span>
+      </button>
+      <p class="floor-label">TWO SAFES. ONE LISTENING EAR.</p>
+    </div>
+  </section>
+  <section id="lock-page" aria-labelledby="lock-title" hidden>
+    <div class="station-heading"><button id="back">← Room</button><h2 id="lock-title" tabindex="-1">Introductory lock · Four wheels</h2><button id="xray-open" type="button" aria-controls="xray-panel" aria-expanded="false">AR-X-Ray Lock Model</button><span class="edition">FOUR WHEELS</span></div>
+    <div class="lock-workspace">
+      <p id="dial-guidance" role="status" aria-live="polite"></p>
+      <div id="lock-event-indicators" class="sensor-strip" hidden aria-label="Mechanical events and trial placement">
+        <div id="sensor-pickup" class="sensor-lamp"><span class="sensor-light" aria-hidden="true"></span><div><strong>PICKUP <span id="sensor-pickup-count">0</span></strong><small id="sensor-pickup-reading">No event yet</small></div></div>
+        <div id="sensor-gate" class="sensor-lamp"><span class="sensor-light" aria-hidden="true"></span><div><strong>GATE <span id="sensor-gate-count">0</span></strong><small id="sensor-gate-reading">No event yet</small></div></div>
+        <div id="sensor-positioned" class="sensor-lamp" hidden><span class="sensor-light" aria-hidden="true"></span><div><strong>POSITIONED <span id="sensor-positioned-wheel"></span></strong><small id="sensor-positioned-reading">No trial position yet</small></div></div>
+      </div>
+      <div class="safe-face">
+        <i class="screw tl" aria-hidden="true"></i><i class="screw tr" aria-hidden="true"></i><i class="screw bl" aria-hidden="true"></i><i class="screw br" aria-hidden="true"></i>
+        <div class="dial-assembly">
+          <span class="index" aria-hidden="true"></span>
+          <div id="dial" role="slider" tabindex="0" aria-label="Safe combination dial" aria-describedby="dial-help" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="0, stationary">
+            <svg id="dial-art" viewBox="0 0 400 400" aria-hidden="true">
+              <defs><radialGradient id="metal" cx="35%" cy="27%"><stop stop-color="#eee1ba"/><stop offset=".45" stop-color="#bcaa7d"/><stop offset="1" stop-color="#736748"/></radialGradient></defs>
+              <circle cx="200" cy="200" r="191" fill="url(#metal)" stroke="#201f19" stroke-width="4"/>
+              <circle cx="200" cy="200" r="180" fill="#203b39" stroke="#e0cb93" stroke-width="2"/>
+              <g id="graduations"></g>
+              <circle id="dial-target-dot" cx="200" cy="46" r="8" fill="#218cff" stroke="#fff" stroke-width="2.5" style="display:none"/>
+              <circle cx="200" cy="200" r="117" fill="url(#metal)" stroke="#091e1d" stroke-width="4"/>
+              <circle cx="200" cy="200" r="102" fill="none" stroke="#554d38" stroke-width="9" stroke-dasharray="2 4"/>
+              <circle cx="200" cy="200" r="90" fill="#334840" stroke="#dfca94" stroke-width="2"/>
+              <circle cx="200" cy="200" r="75" fill="#263d37" stroke="#9b8d65"/>
+              <path d="M200 134v16" stroke="#d8bf82" stroke-width="4" stroke-linecap="round"/>
+              <text x="200" y="204" text-anchor="middle" fill="#e4d3a4" font-family="Georgia,serif" font-size="17" letter-spacing="4">SAFECRACK</text>
+              <text x="200" y="227" text-anchor="middle" fill="#aeb7a4" font-family="monospace" font-size="10" letter-spacing="3">FOUR WHEELS</text>
+            </svg>
+          </div>
+        </div>
+        <button id="solo-bolt" class="safe-handle" type="button" disabled data-open="false">Retract bolt · align all gates first</button>
+      </div>
+      <div class="dial-toolbar">
+        <div class="actions"><button id="reset">Reset dial</button></div>
+        <div class="readouts" aria-label="Dial readings"><div><span>AT THE INDEX</span><output id="position">00.0</output></div><div><span>MOTION</span><output id="motion">Stationary</output></div><div><span>TRAVEL</span><output id="travel">0.00 turns</output></div></div>
+      </div>
+      <div class="voice-panel play-options"><button id="solo-start" type="button">No Assist</button><button id="guide-start" type="button">Crack Open With AI</button><button id="main-dial-ai" type="button" hidden>Dial Open With AI</button><button id="main-dial-stop" type="button" hidden>Stop Dial Instructions</button><p id="guide-status" role="status" aria-live="polite">Choose AI assistance or solve by listening. Either starts from zero with fresh evidence.</p></div>
+      <p id="dot-guide-help" hidden><span class="dot-blue">● ↶ Anticlockwise</span> · <span class="dot-green">● ↷ Clockwise</span> · <span class="dot-red">● Final approach</span><br>Bring the dot to the index. On the correct appearance, pause for the next dot, then reverse. On the final wheel, try the handle.</p>
+      <label><input id="register-events" type="checkbox"> Register lock events</label>
+      <section id="pass-through-panel" hidden><h3>Dial opening instructions</h3><p>From Reset, pass each gate and stop at the stated integer and appearance. Reverse for the next row; on the final row, try the handle. No extra click or timed pause.</p><pre id="pass-through-rows" style="white-space:pre-wrap;font:inherit;line-height:1.8"></pre><p>One division of stopping error is allowed after a verified crossing. Later turns can still disturb centred gates.</p></section>
+      <p id="gate-catch-test-notice" role="status" hidden><strong>Test mode: gate catching is OFF.</strong> Open the normal game URL without <code>gateCatch=off</code> to restore it.</p>
+      <section id="post-open" class="owner-result post-open" aria-labelledby="post-title" hidden>
+        <h3 id="post-title" tabindex="-1">You’re in - now work out the lock details.</h3>
+        <p id="post-lock"></p><p>Use your observations, free dial and Lock Model reconstructed by your smart safecracking tool to solve two tasks. Work independently, or ask the AI assistant to explain what to watch as you turn the dial. Your owner’s reference is revealed when both are solved.</p>
+        <div class="owner-actions"><button id="post-guide-start" type="button">Guide me through these tasks</button><button id="post-guide-stop" type="button" hidden>Stop task guidance</button></div>
+        <p id="post-guide-status" role="status" aria-live="polite"></p>
+        <p id="post-progress" role="status" aria-live="polite"></p>
+        <fieldset><legend>1 · Find the lock settings</legend>
+          <p>Reset the dial. Turn anticlockwise and watch each wheel in the Lock Model. When its gate notch is near the top and the model says Setting readable or Gate centred, record its rounded whole-number wheel reading here: that is its lock setting. Half a division of positioning tolerance is allowed. Wheel readings start at zero on Reset and differ from the main dial reading. Record wheels 4 / 3 / 2 / 1.</p>
+          <div class="post-settings">
+            <label>Wheel 4<input id="post-setting-4" type="number" min="0" max="99" step="1" inputmode="numeric"></label>
+            <label>Wheel 3<input id="post-setting-3" type="number" min="0" max="99" step="1" inputmode="numeric"></label>
+            <label>Wheel 2<input id="post-setting-2" type="number" min="0" max="99" step="1" inputmode="numeric"></label>
+            <label>Wheel 1<input id="post-setting-1" type="number" min="0" max="99" step="1" inputmode="numeric"></label>
+          </div>
+          <p id="post-settings-result" role="status" aria-live="polite"></p>
+        </fieldset>
+        <fieldset><legend>2 · Discover gate positions and appearance numbers</legend>
+          <p>Start anticlockwise from Reset at zero. Discover the gate positions for wheels 1 → 2 → 3 → 4 in alternating moves. Only the wheel you are observing needs to be aligned; other wheels may move and their recorded readings are kept. Half a division of positioning tolerance is allowed. Count each arrival at a gate position as an appearance. The first arrival requires movement, even if that number is zero. Record gate positions with two decimal places.</p>
+          <p><strong>Starting direction: anticlockwise.</strong> Record each decimal gate position and its appearance number. These are discovery observations; the completed Dial Instructions use integer dial positions beyond each gate.</p><p id="post-clearing-note" hidden>This lock needs an initial anticlockwise clearing move: turn at least once, stop with wheel 4’s gate centred, then reverse clockwise to set wheel 1. Record the clearing move in the first row.</p>
+          <p>After each observation, reverse for the next wheel. Record the observed gate position to two decimal places. Corrective turns are practice and do not change the established appearance number. Once all gate positions are recorded, the uninterrupted opening is checked automatically. The resulting Dial Instructions convert each gate position into an integer position beyond the gate with its own appearance number.</p>
+          <table><thead><tr><th>Wheel</th><th>Turn</th><th>Gate position</th><th>Appearance number</th></tr></thead><tbody>
+            <tr id="post-row-1"><td id="post-wheel-1">1</td><td id="post-direction-1">Anti</td><td><input id="post-stop-1" aria-label="Step 1 gate position" type="number" min="0" max="99.99" step="0.01" inputmode="decimal"></td><td><input id="post-count-1" aria-label="Step 1 appearance number" type="number" min="1" max="20" step="1" inputmode="numeric"></td></tr>
+            <tr id="post-row-2"><td id="post-wheel-2">2</td><td id="post-direction-2">Clock</td><td><input id="post-stop-2" aria-label="Step 2 gate position" type="number" min="0" max="99.99" step="0.01" inputmode="decimal"></td><td><input id="post-count-2" aria-label="Step 2 appearance number" type="number" min="1" max="20" step="1" inputmode="numeric"></td></tr>
+            <tr id="post-row-3"><td id="post-wheel-3">3</td><td id="post-direction-3">Anti</td><td><input id="post-stop-3" aria-label="Step 3 gate position" type="number" min="0" max="99.99" step="0.01" inputmode="decimal"></td><td><input id="post-count-3" aria-label="Step 3 appearance number" type="number" min="1" max="20" step="1" inputmode="numeric"></td></tr>
+            <tr id="post-row-4"><td id="post-wheel-4">4</td><td id="post-direction-4">Clock</td><td><input id="post-stop-4" aria-label="Step 4 gate position" type="number" min="0" max="99.99" step="0.01" inputmode="decimal"></td><td><input id="post-count-4" aria-label="Step 4 appearance number" type="number" min="1" max="20" step="1" inputmode="numeric"></td></tr>
+            <tr id="post-row-5" hidden><td id="post-wheel-5">5</td><td id="post-direction-5">Anti</td><td><input id="post-stop-5" aria-label="Step 5 gate position" type="number" min="0" max="99.99" step="0.01" inputmode="decimal"></td><td><input id="post-count-5" aria-label="Step 5 appearance number" type="number" min="1" max="20" step="1" inputmode="numeric"></td></tr>
+          </tbody></table>
+          <p id="post-instructions-result" role="status" aria-live="polite"></p>
+
+        </fieldset>
+      </section>
+      <section id="owner-result" class="owner-result" aria-labelledby="owner-title" hidden>
+        <h3 id="owner-title" tabindex="-1">Lock Details</h3><p id="owner-lock-name"></p>
+        <p><strong>Lock Settings</strong> <span id="owner-settings"></span><br><small>Wheel 4 / Wheel 3 / Wheel 2 / Wheel 1 — determined by the safecracker.</small></p>
+        <p><strong id="owner-sequence-label">Owner’s Dial Instructions</strong> — <span id="owner-sequence-note">start from reset at zero.</span></p>
+        <p><strong>Pass the gate:</strong> stop at the integer dial position on the stated appearance, then reverse. On the final row, try the handle. No extra click or timed pause.</p>
+        <table id="owner-table"><thead><tr><th>Wheel</th><th>Turn</th><th>Integer position</th><th>Appearance number</th></tr></thead><tbody id="owner-stops"></tbody></table>
+        <details><summary>Discovery record · gate positions</summary><p>Gate positions are decimal main-dial readings. Their appearance numbers refer to the gates, rather than the integer stopping positions.</p><table><thead><tr><th>Wheel</th><th>Turn</th><th>Gate position</th><th>Appearance number</th></tr></thead><tbody id="owner-gates"></tbody></table></details>
+        <p id="owner-tolerance">Count each arrival at the number as an appearance. Do not reverse until stopped. Up to one division past the stop is accepted. Further overshoot requires a restart from zero.</p>
+        <p id="owner-validity"></p><p class="owner-controls-note">Keyboard: arrows advance to the next click; Shift + arrow moves one tenth of a division.</p>
+        <div class="owner-actions"><button id="owner-print" type="button">Save Lock Details</button></div>
+      </section>
+      <p id="dial-help">Drag around the dial with your mouse or finger.<br>Lift and touch again to keep turning.<br><span id="keyboard-help">Keyboard: ← / → to turn. Shift for fine control.</span></p>
+
+      <details class="voice-panel">
+        <summary>Mechanical sounds</summary>
+        <p>A tick marks movement. Enable Register lock events above for pickup clicks, gate notes and the event indicators. Fence and bolt sounds remain available with registration off.</p>
+        <label class="voice-toggle"><input id="sound-enabled" type="checkbox"> Mechanical sounds on</label>
+        <p>On iPhone, turn Silent mode off to hear mechanical sounds.</p>
+        <p id="iphone-audio-policy" hidden>Speech and mechanical sounds play together using Browser default audio.</p>
+        <label for="sound-volume">Mechanical sound volume</label>
+        <input id="sound-volume" type="range" min="0" max="100" value="45">
+        <p id="sound-status" role="status" aria-live="polite">Starting either mode enables mechanical sounds.</p>
+      </details>
+      <details class="voice-panel">
+        <summary>Your AI assistant’s voice</summary>
+        <label class="voice-toggle"><input id="voice-enabled" type="checkbox" checked> Voice on</label>
+        <p>Jennifer · UK female · Recorded voice</p>
+        <p>Crack Open With AI, Lock Discovery and Dial Open With AI use Jennifer’s recorded dialogue. Voice and mechanical sounds play together; other unrecorded instructions appear as text.</p>
+        <label for="voice-volume">Voice volume</label>
+        <input id="voice-volume" type="range" min="0" max="1" step=".05" value=".8">
+        <label for="voice-phrase">Test phrase</label>
+        <select id="voice-phrase">
+          <option>First we start with four turns to find four unique gate positions. Go clockwise.</option>
+          <option>Go anti one click.</option>
+          <option>Wheel four set.</option>
+          <option>Let’s try the bolt. Turn the handle.</option>
+          <option>Sequence successful. All gates are aligned and the fence is down.</option>
+        </select>
+        <div class="voice-buttons"><button id="voice-test" type="button" disabled>Test voice</button><button id="voice-stop" type="button" disabled>Stop voice</button></div>
+        <p id="voice-status" role="status" aria-live="polite">Loading Jennifer’s recordings…</p>
+      </details>
+    </div>
+  </section>
+  <footer>A steady hand makes all the difference.<span id="revision">rev a9ad8d3b06</span></footer>
+</main>
+<section id="xray-panel" class="xray-panel" role="dialog" aria-modal="false" aria-labelledby="xray-title" hidden>
+  <div class="xray-heading"><div id="xray-handle"><strong id="xray-title">AR-X-Ray Lock Model · Introduction</strong><span>Drag to move</span></div><button id="xray-close" type="button" aria-label="Close AR-X-Ray Lock Model">×</button></div>
+  <svg id="xray-art" viewBox="0 0 525 250" role="img" aria-label="Live drive, four wheels, gates, fence and bolt"></svg>
+  <div id="xray-wheels" class="xray-wheels" aria-label="Wheel readings from Reset"></div>
+  <p id="xray-command">Free dial</p>
+  <form id="post-step-form" hidden>
+    <div class="post-step-fields"><label><span id="post-step-label">Current reply</span><input id="post-step-number" type="number" min="0" max="99.99" step="0.01" inputmode="decimal" required></label><label id="post-step-count-label" hidden>Appearance number<input id="post-step-count" type="number" min="1" max="20" step="1" inputmode="numeric"></label></div>
+    <button type="submit">Check and continue</button><p id="post-step-feedback" role="status" aria-live="polite"></p>
+  </form><div class="model-index-row"><p id="xray-reading"></p><button id="model-reset" type="button">Reset Dial</button></div><p class="xray-legend">Brass: moving · Green: gate aligned<br>Hollow dot: driving tab · Copper dot: receiving tab<br>Wheel reading starts at zero on Reset. Near the gate, Setting readable means the rounded integer gives the lock setting (within half a division). Opening dial numbers still use decimals.</p>
+  <div id="model-dial-controls" hidden role="group" aria-label="Turn the dial"><button id="model-acw" type="button">ACW nudge</button><button id="model-cw" type="button">CW nudge</button><button id="model-fast-acw" type="button">Fast ACW</button><button id="model-fast-cw" type="button">Fast CW</button><p>Nudge: 0.2 division · Hold Fast to turn; release to stop.</p></div>
+</section>
+<dialog id="win-dialog" class="win-dialog" aria-labelledby="win-title" aria-describedby="win-description">
+  <div id="win-confetti" class="gold-shower" aria-hidden="true"></div>
+  <button id="win-close" class="win-close" type="button" aria-label="Close celebration">×</button>
+  <p class="win-kicker">THE LISTENING ROOM · FOUR WHEELS</p>
+  <h2 id="win-title">You cracked it<span>!</span></h2>
+  <p id="win-description">A steady hand. A very handsome reward.</p>
+  <div id="win-scene" class="win-scene"></div>
+  <p class="win-haul">CASH · GOLD · ROLEX · TREASURE</p>
+  <div class="win-actions"><button id="win-challenge" type="button" hidden>Next challenge: find the combination</button><button id="win-print" type="button" hidden>Save Lock Details</button><button id="win-replay" type="button">Once more, with feeling</button><button id="win-return" type="button">Back to the dial</button></div>
+</dialog>
+<script type="module" src="app.js"></script>
+</body>
+</html>
+
+
+
