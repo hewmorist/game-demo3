@@ -1429,6 +1429,18 @@
       "file": "INTRO_SEARCH.mp3",
       "scope": "crack",
       "id": "INTRO_SEARCH"
+    },
+    {
+      "text": "First we start with up to four turns to find four unique gate positions. Follow my instructions carefully. To indicate turn direction I may just say “go clock”, or, “go anti”.",
+      "file": "INTRO_DIRECTIONS.mp3",
+      "scope": "crack",
+      "id": "INTRO_DIRECTIONS"
+    },
+    {
+      "text": "Introductory crack on pause",
+      "file": "INTRO_CRACKON.mp3",
+      "scope": "crack",
+      "id": "INTRO_CRACKON"
     }
   ],
   "discoveryTemplates": [

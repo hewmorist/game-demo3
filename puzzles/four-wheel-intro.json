@@ -9,7 +9,7 @@
     79
   ],
   "lines": {
-    "greeting": "{greeting} I will assist you in cracking this lock. There is an augmented reality, X-ray viewer for this introductory lock that you might want to avail yourself of as I guide you through the process. Remember - a deliberate and steady hand wins the day.",
+    "greeting": "{greeting} I will assist you in cracking this lock. There is an augmented reality, X-ray viewer for this introductory lock that you might want to avail yourself of as I guide you through the process. Remember - a deliberate and steady hand wins the day. First we start with up to four turns to find four unique gate positions. Follow my instructions carefully. To indicate turn direction I may just say “go clock”, or, “go anti”. Let’s crack on, shall we.",
     "stop": "Stop.",
     "singleClicks": "Slower. Single clicks.",
     "stepAnti": "Step anti.",
@@ -90,7 +90,7 @@
   "searches": [
     {
       "direction": "clock",
-      "command": "First we start with up to four turns to find four unique gate positions. Go clockwise.",
+      "command": "Go clock.",
       "until": {
         "readings": 4
       },
