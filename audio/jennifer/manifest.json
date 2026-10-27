@@ -1408,9 +1408,27 @@
     },
     {
       "text": "Follow my instructions. Remember - a deliberate and steady hand wins the day. To indicate direction I will just say, “Go clock” or “Go anti.”",
-      "file": "CRACK_INTRO.mp3",
+      "file": "CRACK_INTRO_v2.mp3",
       "scope": "crack",
       "id": "CRACK_INTRO"
+    },
+    {
+      "text": "I will assist you in cracking this lock. There is an augmented reality, X-ray viewer for this introductory lock that you might want to avail yourself of, as I guide you through the process.",
+      "file": "CRACK_XRAY.mp3",
+      "scope": "crack",
+      "id": "CRACK_XRAY"
+    },
+    {
+      "text": "I will assist you in cracking this lock. There is an augmented reality, X-ray viewer for this introductory lock that you might want to avail yourself of as I guide you through the process. Remember - a deliberate and steady hand wins the day.",
+      "file": "INTRO_REBUILD.mp3",
+      "scope": "crack",
+      "id": "INTRO_REBUILD"
+    },
+    {
+      "text": "First we start with up to four turns to find four unique gate positions. Go clockwise.",
+      "file": "INTRO_SEARCH.mp3",
+      "scope": "crack",
+      "id": "INTRO_SEARCH"
     }
   ],
   "discoveryTemplates": [
